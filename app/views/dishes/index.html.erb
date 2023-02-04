@@ -1,0 +1,12 @@
+<div class= "container">
+  <h1>Index</h1>
+  <% @dishes.each do |dish| %>
+    <h2><%= dish.name %></h2>
+    <div class= "m-2">
+      <p><%= dish.description %></p>
+      <h5>Recipie</h5>
+      <p><%= dish.recipie %></p>
+      <p>This recipie is made for <strong><%= dish.numpers %></strong> people</p>
+    </div>
+  <% end %>
+</div>
