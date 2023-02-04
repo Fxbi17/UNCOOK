@@ -10,14 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_04_104933) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_04_154631) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "deliveries", force: :cascade do |t|
     t.string "status"
+    t.bigint "user_id", null: false
+    t.bigint "shopping_list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shopping_list_id"], name: "index_deliveries_on_shopping_list_id"
+    t.index ["user_id"], name: "index_deliveries_on_user_id"
   end
 
   create_table "dishes", force: :cascade do |t|
@@ -63,10 +67,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_04_104933) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "content"
     t.integer "rating"
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "dish_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["dish_id"], name: "index_reviews_on_dish_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "shopping_lists", force: :cascade do |t|
@@ -91,11 +99,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_04_104933) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "deliveries", "shopping_lists"
+  add_foreign_key "deliveries", "users"
   add_foreign_key "ingredient_dishes", "dishes"
   add_foreign_key "ingredient_dishes", "ingredients"
   add_foreign_key "menu_dishes", "dishes"
   add_foreign_key "menu_dishes", "menus"
   add_foreign_key "menus", "users"
+  add_foreign_key "reviews", "dishes"
+  add_foreign_key "reviews", "users"
   add_foreign_key "shopping_lists", "ingredient_dishes"
   add_foreign_key "shopping_lists", "menu_dishes"
 end
