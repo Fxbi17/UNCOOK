@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :dishes, only: [:index]
+  resources :dishes, only: [:index, :show]
 end
 
 
