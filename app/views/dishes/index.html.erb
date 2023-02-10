@@ -1,13 +1,16 @@
 <div class= "container">
-  <h1>Index</h1>
+  <h1>Dishes</h1>
+  <%# <%= link_to "Add a new dishes", new_dishes_path %>
+</div>
+
+<div class = "m-5">
   <% @dishes.each do |dish| %>
     <h2><%= dish.name %></h2>
-    <div class= "m-2">
       <p><%= dish.description %></p>
       <h5>Recipie</h5>
       <p><%= dish.recipie %></p>
       <p>This recipie is made for <strong><%= dish.numpers %></strong> people</p>
-    </div>
+      <%= link_to "See details", dish_path(dish), class: "btn btn-primary"%>
   <% end %>
 </div>
 

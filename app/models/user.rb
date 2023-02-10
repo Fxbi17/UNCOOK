@@ -5,6 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :menu
-  has_many :review
+  has_many :reviews, dependent: :destroy
   has_many :delivery
+
+  validates :email, presence: true
+  # validates :login, :email, presence: true
+  # validates :email, format: { with: /\A.*@.*\.com\z/ }
+  # validates :role, presence: true
 end
