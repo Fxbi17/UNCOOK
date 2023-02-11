@@ -2,6 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    @dishes = Dish.first(6)
+    @dishes = Dish.first(3)
   end
 end
