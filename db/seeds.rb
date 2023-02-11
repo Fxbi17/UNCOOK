@@ -67,7 +67,7 @@ dish4 = Dish.create!(
     6. Add the sauce in the pasta.",
   numpers: 4
 )
-dish4.photo.attach(io: File.open('app/assets/images/spaghetti.jpeg'), filename: "spaghetti.jpeg", content_type: "image/jpeg")
+dish4.photo.attach(io: File.open('app/assets/images/spaghetti.jpg'), filename: "spaghetti.jpg", content_type: "image/jpeg")
 
 dish5 = Dish.create!(
   name: "Lasagna",
@@ -83,7 +83,7 @@ dish5 = Dish.create!(
     6. Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 minutes. Let stand 15 minutes before serving.",
   numpers: 8
 )
-dish5.photo.attach(io: File.open('app/assets/images/lasagne.jpeg'), filename: "lasagne.jpeg", content_type: "image/jpeg")
+dish5.photo.attach(io: File.open('app/assets/images/lasagne.jpg'), filename: "lasagne.jpg", content_type: "image/jpeg")
 
 dish6 = Dish.create!(
   name: "Tiramisu",
