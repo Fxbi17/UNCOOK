@@ -7,11 +7,14 @@ IngredientDish.destroy_all
 Dish.destroy_all
 Ingredient.destroy_all
 p "Database cleaned"
+
 p 'Creating users'
 user1 = User.create!(email: 'fabio@uncook.co', password: '123456')
 user2 = User.create!(email: 'bruno@uncook.co', password: '123456')
 p 'Users created'
+
 p 'Creating dishes'
+
 dish1 = Dish.create!(
   name: "Pizza",
   description: "Pizza is a savory dish of Italian
@@ -29,6 +32,8 @@ dish1 = Dish.create!(
     7. Cut into wedges and serve.",
   numpers: 4
 )
+dish1.photo.attach(io: File.open('app/assets/images/pizza.jpeg'), filename: "pizza.jpeg", content_type: "image/jpeg")
+
 dish2 = Dish.create!(
   name: "Pasta",
   description: "Pasta is a staple food of traditional
@@ -43,6 +48,8 @@ dish2 = Dish.create!(
     4. Sprinkle with Parmesan cheese, and serve.",
   numpers: 3
 )
+dish2.photo.attach(io: File.open('app/assets/images/pates.jpeg'), filename: "pates.jpeg", content_type: "image/jpeg")
+
 dish3 = Dish.create!(
   name: "Risotto",
   description: "Risotto is a northern Italian rice
@@ -58,6 +65,8 @@ dish3 = Dish.create!(
     minutes. Stir in peas and Parmesan cheese. Serve immediately.",
   numpers: 2
 )
+dish3.photo.attach(io: File.open('app/assets/images/risotto.jpeg'), filename: "risotto.jpeg", content_type: "image/jpeg")
+
 dish4 = Dish.create!(
   name: "Cacio e pepe",
   description: "Spaghetti is a long, thin, solid,
@@ -75,6 +84,8 @@ dish4 = Dish.create!(
     6. Add the sauce in the pasta.",
   numpers: 4
 )
+dish4.photo.attach(io: File.open('app/assets/images/spaghetti.jpeg'), filename: "spaghetti.jpeg", content_type: "image/jpeg")
+
 dish5 = Dish.create!(
   name: "Lasagna",
   description: "Lasagna is an oven-baked dish
@@ -99,6 +110,8 @@ dish5 = Dish.create!(
     minutes. Let stand 15 minutes before serving.",
   numpers: 8
 )
+dish5.photo.attach(io: File.open('app/assets/images/lasagne.jpeg'), filename: "lasagne.jpeg", content_type: "image/jpeg")
+
 dish6 = Dish.create!(
   name: "Tiramisu",
   description: "Tiramisu is an Italian dessert.
@@ -120,7 +133,10 @@ dish6 = Dish.create!(
     sprinkle with cocoa.",
   numpers: 8
 )
+dish6.photo.attach(io: File.open('app/assets/images/tiramisu.jpeg'), filename: "tiramisu.jpeg", content_type: "image/jpeg")
+
 p 'Dishes created'
+
 p 'Creating ingredients'
 pizza_dough = Ingredient.create!(name: "Pizza dough")
 pizza_sauce = Ingredient.create!(name: "Pizza sauce")
@@ -154,7 +170,9 @@ coffee = Ingredient.create!(name: "Coffee granules")
 ladyfingers = Ingredient.create!(name: "Ladyfingers")
 cocoa = Ingredient.create!(name: "Cocoa powder")
 p 'Ingredients created'
-11 h 30
+
+# 11 h 30
+
 p "Creating links between Dishes and Ingredients"
 # ingredients_pizza = [pizza_dough, pizza_sauce, mozza, pepperoni, mushrooms, green_pepper]
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: pizza_dough.id, quantity: "1")
