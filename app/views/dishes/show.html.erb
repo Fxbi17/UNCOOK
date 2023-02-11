@@ -1,15 +1,21 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-5 scroll mt-5">
       <div class ="mt-5"><h1><%= @dish.name %></h1></div>
       <p><%= @dish.description %></p>
       <p><%= simple_format h(@dish.recipie) %></p>
+
+      <h2>Ingredients</h2>
+        <% @dish.ingredient_dish.each do |ingredient_dish| %>
+          <p><%= ingredient_dish.quantity %> <%= ingredient_dish.ingredient.name %></p>
+        <% end %>
+
+      <h2>Reviews</h2>
       <div>
         <%= link_to new_dish_review_path(@dish) do %>
           <i>Add a review</i>
         <% end %>
       </div>
-      <h2>Reviews</h2>
       <ul class="list-group">
         <% @dish.reviews.each do |review| %>
           <li>
@@ -17,6 +23,8 @@
             <%= review.content %>
           </li>
         <% end %>
+
+
       </ul>
     </div>
     <div class="col-md-7 mt-5">
