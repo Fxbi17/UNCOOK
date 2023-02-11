@@ -28,6 +28,7 @@ dish1 = Dish.create!(
     7. Cut into wedges and serve.",
   numpers: 4
 )
+dish1.photo.attach(io: File.open('app/assets/images/pizza.jpeg'), filename: "pizza.jpeg", content_type: "image/jpeg")
 
 dish2 = Dish.create!(
   name: "Pasta",
@@ -40,6 +41,7 @@ dish2 = Dish.create!(
     4. Sprinkle with Parmesan cheese, and serve.",
   numpers: 3
 )
+dish2.photo.attach(io: File.open('app/assets/images/pates.jpeg'), filename: "pates.jpeg", content_type: "image/jpeg")
 
 dish3 = Dish.create!(
   name: "Risotto",
@@ -50,6 +52,7 @@ dish3 = Dish.create!(
     2. Add onion and cook until tender, about 5 minutes. Stir in rice and cook until lightly toasted, about 3 minutes. Stir in wine and cook until absorbed, about 2 minutes. Stir in broth, 1/2 cup at a time, and cook until absorbed before adding more. Season with salt and pepper. Cook until rice is tender and creamy, about 20 minutes. Stir in peas and Parmesan cheese. Serve immediately.",
   numpers: 2
 )
+dish3.photo.attach(io: File.open('app/assets/images/risotto.jpeg'), filename: "risotto.jpeg", content_type: "image/jpeg")
 
 dish4 = Dish.create!(
   name: "Cacio e pepe",
@@ -64,6 +67,7 @@ dish4 = Dish.create!(
     6. Add the sauce in the pasta.",
   numpers: 4
 )
+dish4.photo.attach(io: File.open('app/assets/images/spaghetti.jpeg'), filename: "spaghetti.jpeg", content_type: "image/jpeg")
 
 dish5 = Dish.create!(
   name: "Lasagna",
@@ -79,6 +83,7 @@ dish5 = Dish.create!(
     6. Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 minutes. Let stand 15 minutes before serving.",
   numpers: 8
 )
+dish5.photo.attach(io: File.open('app/assets/images/lasagne.jpeg'), filename: "lasagne.jpeg", content_type: "image/jpeg")
 
 dish6 = Dish.create!(
   name: "Tiramisu",
@@ -89,6 +94,8 @@ dish6 = Dish.create!(
     2. In a small bowl, dissolve the coffee granules in the boiling water. Dip the ladyfingers in the coffee mixture for 1 second on each side. Arrange half of the ladyfingers in a 13-in. x 9-in. dish. Spread with half of the mascarpone mixture. Repeat layers. Cover and refrigerate for at least 4 hours. Just before serving, sprinkle with cocoa.",
   numpers: 8
 )
+dish6.photo.attach(io: File.open('app/assets/images/tiramisu.jpeg'), filename: "tiramisu.jpeg", content_type: "image/jpeg")
+
 p 'Dishes created'
 
 p 'Creating ingredients'
