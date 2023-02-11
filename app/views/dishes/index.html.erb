@@ -3,15 +3,24 @@
   <%# <%= link_to "Add a new dishes", new_dishes_path %>
 </div>
 
-<div class = "m-5">
-  <% @dishes.each do |dish| %>
-    <h2><%= dish.name %></h2>
-      <p><%= dish.description %></p>
-      <h5>Recipie</h5>
-      <p><%= dish.recipie %></p>
-      <p>This recipie is made for <strong><%= dish.numpers %></strong> people</p>
-      <%= link_to "See details", dish_path(dish), class: "btn btn-primary"%>
-  <% end %>
-</div>
+<div class="row">
+      <% @dishes.each do |dish| %>
+        <div class="col-lg-4">
+          <%# if dish.image.attached? %>
+            <%#= cl_image_tag(dish.image.key, crop: :fill, class: "bd-placeholder-img rounded-circle") %>
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#777"/>
+              <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+          <%# end %>
+          <h2><%= dish.name %></h2>
+          <p><%= dish.numpers %> serving</p>
+          <p><%= dish.description.html_safe %></p>
+          <p><a class="btn btn-secondary" href="/dishes/<%= dish.id %>">Recipe &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      <% end %>
+    </div>
 
 Now we can see the dishes in the index page.
