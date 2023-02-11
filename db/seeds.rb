@@ -14,15 +14,11 @@ user2 = User.create!(email: 'bruno@uncook.co', password: '123456')
 p 'Users created'
 
 p 'Creating dishes'
-
 dish1 = Dish.create!(
   name: "Pizza",
-  description: "Pizza is a savory dish of Italian
-    origin, consisting of a usually round, flattened base of leavened wheat-based
-    dough topped with tomatoes, cheese, and often various other ingredients (such
-    as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then
-    baked at a high temperature, traditionally in a wood-fired oven. A small pizza
-    is sometimes called a pizzetta. A person who makes pizza is known as a pizzaiolo.",
+  description: "Pizza is a round, flat base topped with sauce, cheese, and toppings,
+                baked in a wood-fired oven, with a pizzetta being a small version
+                made by a pizzaiolo.",
   recipie: "1. Preheat oven to 500 degrees F (260 degrees C).,\n
     2. Roll out dough into a 12-inch circle on a lightly floured surface.,\n
     3. Spread pizza sauce over dough, leaving a 1/2-inch border.,\n
@@ -36,14 +32,11 @@ dish1.photo.attach(io: File.open('app/assets/images/pizza.jpeg'), filename: "piz
 
 dish2 = Dish.create!(
   name: "Pasta",
-  description: "Pasta is a staple food of traditional
-    Italian cuisine, with the first reference dating to 1154 in Sicily. It is also commonly
-    used to refer to the variety of pasta dishes. Italian pasta is made from an unleavened
-    dough of a durum wheat flour mixed with water or eggs, and formed into sheets or various
-    shapes, then cooked by boiling or baking.",
+  description: "Pasta is a traditional Italian staple food, made from unleavened
+                durum wheat flour and water or eggs, formed into shapes and cooked,
+                also referring to various pasta dishes, dating back to 1154 in Sicily.",
   recipie: "1. Bring a large pot of lightly salted water to a boil.,\n
-    2. Cook pasta in the boiling water, stirring occasionally until cooked through but
-    still firm to the bite, about 12 minutes. Drain.,\n
+    2. Cook pasta in the boiling water, stirring occasionally until cooked through but still firm to the bite, about 12 minutes. Drain.,\n
     3. Place pasta in a large bowl. Add marinara sauce, and toss to coat.,\n
     4. Sprinkle with Parmesan cheese, and serve.",
   numpers: 3
@@ -52,32 +45,22 @@ dish2.photo.attach(io: File.open('app/assets/images/pates.jpeg'), filename: "pat
 
 dish3 = Dish.create!(
   name: "Risotto",
-  description: "Risotto is a northern Italian rice
-    dish cooked with broth to a creamy consistency. The broth can be derived from meat,
-    fish, or vegetables. Risotto is usually made with Carnaroli or Vialone Nano rice,
-    but Arborio is commonly used because of its high starch content. The rice is first
-    lightly toasted in fat, then the liquid is gradually added and absorbed into the rice.",
+  description: "Risotto is a creamy Italian rice dish with broth from meat, fish,
+                or vegetables, made with Carnaroli/Vialone Nano rice or often Arborio,
+                achieved by toasting rice and gradually adding liquid.",
   recipie: "1. Heat olive oil in a large saucepan over medium heat.,\n
-    2. Add onion and cook until tender, about 5 minutes. Stir in rice and cook until
-    lightly toasted, about 3 minutes. Stir in wine and cook until absorbed, about 2
-    minutes. Stir in broth, 1/2 cup at a time, and cook until absorbed before adding
-    more. Season with salt and pepper. Cook until rice is tender and creamy, about 20
-    minutes. Stir in peas and Parmesan cheese. Serve immediately.",
+    2. Add onion and cook until tender, about 5 minutes. Stir in rice and cook until lightly toasted, about 3 minutes. Stir in wine and cook until absorbed, about 2 minutes. Stir in broth, 1/2 cup at a time, and cook until absorbed before adding more. Season with salt and pepper. Cook until rice is tender and creamy, about 20 minutes. Stir in peas and Parmesan cheese. Serve immediately.",
   numpers: 2
 )
 dish3.photo.attach(io: File.open('app/assets/images/risotto.jpeg'), filename: "risotto.jpeg", content_type: "image/jpeg")
 
 dish4 = Dish.create!(
   name: "Cacio e pepe",
-  description: "Spaghetti is a long, thin, solid,
-    cylindrical pasta. It is a staple food of traditional Italian cuisine. Like other pasta,
-    spaghetti is made of milled wheat and water and sometimes enriched with vitamins
-    and minerals. Spaghetti is either a specialty of, or is commonly used in, the cuisines
-    of many cultures. The word spaghetti is the plural of the Italian word spaghetto,
-    a diminutive of spago, meaning thin string.",
+  description: "Spaghetti is a long, thin cylindrical pasta, staple of Italian cuisine
+                made from wheat and water, sometimes enriched, used in many cuisines,
+                with the word meaning thin string in Italian.",
   recipie: "1. Bring a large pot of lightly salted water to a boil.,\n
-    2. Cook pasta in the boiling water, stirring occasionally until cooked through but
-    still firm to the bite, about 12 minutes.\n
+    2. Cook pasta in the boiling water, stirring occasionally until cooked through but still firm to the bite, about 12 minutes.\n
     3. In a bowl, mix the grated Pecorino cheese and pepper.\n
     4. Keep one cup of pasta water, and add it the mixture above.\n
     5. Drain and place the pasta in a large bowl.\n
@@ -88,49 +71,27 @@ dish4.photo.attach(io: File.open('app/assets/images/spaghetti.jpeg'), filename: 
 
 dish5 = Dish.create!(
   name: "Lasagna",
-  description: "Lasagna is an oven-baked dish
-    consisting of stacked layers of thin flat pasta alternating with fillings such as
-    meat ragù, vegetables, and cheese, and seasonings and condiments such as tomato
-    sauce, garlic, herbs, and spices. The dish is popular in many countries, and
-    can be made with a wide variety of ingredients. Lasagna is a traditional dish
-    of Italy, and is also popular in many countries around the world.",
+  description: "Lasagna is an oven-baked dish of stacked thin pasta, meat ragù,
+                vegetables, cheese, tomato sauce, garlic, herbs, and spices,
+                popular with many variations and a traditional dish of Italy.",
   recipie: "1. Preheat oven to 350 degrees F (175 degrees C).,\n
     2. Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in
     boiling water for 8 to 10 minutes. Drain.,\n
-    3. In a large skillet, brown the ground beef and onion over medium heat. Drain
-    grease. Stir in the tomato sauce, water, Italian seasoning, salt, and garlic
-    powder. Simmer for 10 minutes, stirring occasionally.,\n
-    4. Spread 1 cup of meat sauce in the bottom of a 9x13 inch baking dish. Top with
-    3 uncooked lasagna noodles, broken to fit. Spread with 1 cup ricotta cheese mixture,
-    1 cup mozzarella cheese, and 1/2 cup Parmesan cheese. Repeat layers twice. Top with
-    remaining 3 noodles, meat sauce, mozzarella cheese, and Parmesan cheese.,\n
-    5. Cover with aluminum foil: to prevent sticking, either spray foil with cooking
-    spray, or make sure the foil does not touch the cheese.,\n
-    6. Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25
-    minutes. Let stand 15 minutes before serving.",
+    3. In a large skillet, brown the ground beef and onion over medium heat. Drain grease. Stir in the tomato sauce, water, Italian seasoning, salt, and garlic powder. Simmer for 10 minutes, stirring occasionally.,\n
+    4. Spread 1 cup of meat sauce in the bottom of a 9x13 inch baking dish. Top with 3 uncooked lasagna noodles, broken to fit. Spread with 1 cup ricotta cheese mixture, 1 cup mozzarella cheese, and 1/2 cup Parmesan cheese. Repeat layers twice. Top with remaining 3 noodles, meat sauce, mozzarella cheese, and Parmesan cheese.,\n
+    5. Cover with aluminum foil: to prevent sticking, either spray foil with cooking spray, or make sure the foil does not touch the cheese.,\n
+    6. Bake in preheated oven for 25 minutes. Remove foil, and bake an additional 25 minutes. Let stand 15 minutes before serving.",
   numpers: 8
 )
 dish5.photo.attach(io: File.open('app/assets/images/lasagne.jpeg'), filename: "lasagne.jpeg", content_type: "image/jpeg")
 
 dish6 = Dish.create!(
   name: "Tiramisu",
-  description: "Tiramisu is an Italian dessert.
-    It is made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs,
-    sugar, and mascarpone cheese, flavoured with cocoa. It is typically garnished with
-    cocoa powder. The name is a diminutive of the Italian word for pick-me-up, which
-    in this case refers to its caffeine content. Tiramisu is a popular coffee-flavoured
-    Italian dessert. It is made of ladyfingers dipped in coffee, layered with a whipped
-    mixture of eggs, sugar, and mascarpone cheese, flavoured with cocoa. It is typically
-    garnished with cocoa powder. The name is a diminutive of the Italian word for pick-me-up,
-    which in this case refers to its caffeine content.",
-  recipie: "1. In a large bowl, beat the egg yolks and 1/2 cup sugar until thick and
-    lemon-colored. Beat in mascarpone, 1/2 cup at a time, until smooth. Fold in
-    whipped cream. Cover and refrigerate until serving.,\n
-    2. In a small bowl, dissolve the coffee granules in the boiling water. Dip the
-    ladyfingers in the coffee mixture for 1 second on each side. Arrange half of the
-    ladyfingers in a 13-in. x 9-in. dish. Spread with half of the mascarpone mixture.
-    Repeat layers. Cover and refrigerate for at least 4 hours. Just before serving,
-    sprinkle with cocoa.",
+  description: "Tiramisu is a popular Italian dessert made of ladyfingers, coffee,
+                eggs, sugar, mascarpone cheese, cocoa and garnished with cocoa powder,
+                named after the Italian word for pick-me-up due to its caffeine content.",
+  recipie: "1. In a large bowl, beat the egg yolks and 1/2 cup sugar until thick and lemon-colored. Beat in mascarpone, 1/2 cup at a time, until smooth. Fold in whipped cream. Cover and refrigerate until serving.,\n
+    2. In a small bowl, dissolve the coffee granules in the boiling water. Dip the ladyfingers in the coffee mixture for 1 second on each side. Arrange half of the ladyfingers in a 13-in. x 9-in. dish. Spread with half of the mascarpone mixture. Repeat layers. Cover and refrigerate for at least 4 hours. Just before serving, sprinkle with cocoa.",
   numpers: 8
 )
 dish6.photo.attach(io: File.open('app/assets/images/tiramisu.jpeg'), filename: "tiramisu.jpeg", content_type: "image/jpeg")
@@ -171,8 +132,6 @@ ladyfingers = Ingredient.create!(name: "Ladyfingers")
 cocoa = Ingredient.create!(name: "Cocoa powder")
 p 'Ingredients created'
 
-# 11 h 30
-
 p "Creating links between Dishes and Ingredients"
 # ingredients_pizza = [pizza_dough, pizza_sauce, mozza, pepperoni, mushrooms, green_pepper]
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: pizza_dough.id, quantity: "1")
@@ -181,11 +140,13 @@ IngredientDish.create!(dish_id: dish1.id, ingredient_id: mozza.id, quantity: "25
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: pepperoni.id, quantity: "150g")
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: mushrooms.id, quantity: "230g")
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: green_pepper.id, quantity: "1")
+
 # ingredients_pasta = [pasta, salt, marinara_sauce, parmesan]
 IngredientDish.create!(dish_id: dish2.id, ingredient_id: pasta.id, quantity: "180g")
 IngredientDish.create!(dish_id: dish2.id, ingredient_id: salt.id, quantity: "1 pinch")
 IngredientDish.create!(dish_id: dish2.id, ingredient_id: marinara_sauce.id, quantity: "600g")
 IngredientDish.create!(dish_id: dish2.id, ingredient_id: parmesan.id, quantity: "100g")
+
 # ingredients_risotto = [oil, onion, rice, wine, broth, salt, pepper, peas, parmesan]
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: oil.id, quantity: "2 tbsp")
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: onion.id, quantity: "1")
@@ -196,11 +157,13 @@ IngredientDish.create!(dish_id: dish3.id, ingredient_id: salt.id, quantity: "1 p
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: pepper.id, quantity: "1 pinch")
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: peas.id, quantity: "70g")
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: parmesan.id, quantity: "60g")
+
 # ingredients_cacio = [spaghetti, salt, pecorino, pepper]
 IngredientDish.create!(dish_id: dish4.id, ingredient_id: spaghetti.id, quantity: "400g")
 IngredientDish.create!(dish_id: dish4.id, ingredient_id: salt.id, quantity: "1 pinch")
 IngredientDish.create!(dish_id: dish4.id, ingredient_id: pecorino.id, quantity: "160g")
 IngredientDish.create!(dish_id: dish4.id, ingredient_id: pepper.id, quantity: "2 tbsp")
+
 # ingredients_lasagna = [salt, lasagna, beef, onion, tomato_sauce, italian, garlic, ricotta, mozza, parmesan]
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: salt.id, quantity: "1 pinch")
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: lasagna.id, quantity: "230g")
@@ -212,6 +175,7 @@ IngredientDish.create!(dish_id: dish5.id, ingredient_id: garlic.id, quantity: "1
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: ricotta.id, quantity: "425g")
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: mozza.id, quantity: "680g")
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: parmesan.id, quantity: "115g")
+
 # ingredients_tiramisu = [yolk, sugar, mascarpone, coffee, ladyfingers, cocoa]
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: yolk.id, quantity: "4")
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: sugar.id, quantity: "100g")
@@ -219,4 +183,5 @@ IngredientDish.create!(dish_id: dish6.id, ingredient_id: mascarpone.id, quantity
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: coffee.id, quantity: "300ml")
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: ladyfingers.id, quantity: "300g")
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: cocoa.id, quantity: "1 tbsp")
+
 p "Links between Dishes and Ingredients created"
