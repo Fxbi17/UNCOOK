@@ -12,4 +12,6 @@ class User < ApplicationRecord
   # validates :login, :email, presence: true
   # validates :email, format: { with: /\A.*@.*\.com\z/ }
   # validates :role, presence: true
+
+  acts_as_favoritor
 end
