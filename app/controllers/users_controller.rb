@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @favorites_dish = current_user.all_favorited
+    @shopping_list = current_user.shopping_list
 
     # Get all the menus of the current user
     @menus = Menu.where(user_id: current_user.id)
@@ -14,7 +15,8 @@ class UsersController < ApplicationController
         if shopping_list[ingredient.ingredient_id].nil?
           # Add the ingredient to the hash
           shopping_list[ingredient.ingredient_id] = ingredient.quantity
-        # If the ingredient is in the hash, add the quantity
+          # Add the value to the hash
+          shopping_list[ingredient.name][:value] += ingredient.value
         else
           # Add the quantity to the hash
           shopping_list[ingredient.ingredient_id] += ingredient.quantity
