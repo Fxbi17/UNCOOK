@@ -1,3 +1,12 @@
 .text-yellow {
   color: $yellow
 }
+
+a {
+  text-decoration: none;
+  color: $my_orange_red;
+}
+
+a:hover {
+  color: $my_blue_light;
+}

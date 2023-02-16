@@ -1,22 +1,25 @@
-<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Favorites</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Menu</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Shopping_list</button>
+<div class="flex-row d-flex">
+  <nav>
+    <div class="nav flex-column nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-favorites-tab" data-bs-toggle="tab" data-bs-target="#nav-favorites" type="button" role="tab" aria-controls="nav-favorites" aria-selected="true">Favorites</button>
+      <button class="nav-link" id="nav-menu-tab" data-bs-toggle="tab" data-bs-target="#nav-menu" type="button" role="tab" aria-controls="nav-menu" aria-selected="false">Menu</button>
+      <button class="nav-link" id="nav-shopping-list-tab" data-bs-toggle="tab" data-bs-target="#nav-shopping-list" type="button" role="tab" aria-controls="nav-shopping-list" aria-selected="false">Shopping-list</button>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="nav-favorites" role="tabpanel" aria-labelledby="nav-favorites-tab">
+      <%= render "favorites" %>
+    </div>
+
+    <div class="tab-pane fade" id="nav-menu" role="tabpanel" aria-labelledby="nav-menu-tab">
+      <%= render "menu" %>
+    </div>
+
+    <div class="tab-pane fade" id="nav-shopping-list" role="tabpanel" aria-labelledby="nav-shopping-list-tab">
+      <%= render "shopping-list" %>
+    </div>
+
   </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    <% @favorites_dish.each do |dish| %>
-      <%# <%= dish.name %> <br>
-      <div class="col-lg-4">
-        <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
-        <h2><%= dish.name %></h2>
-        <p><%= dish.description.html_safe %></p>
-        <p><a class="btn btn-secondary" href="/dishes/<%= dish.id %>">Recipe &raquo;</a></p>
-      </div>
-    <% end %>
-  </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
 </div>
