@@ -31,6 +31,18 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
   end
 
+  def add_to_favorite
+    @dish = Dish.find(params[:dish_id])
+    current_user.favorite(@dish)
+    redirect_to dish_path(@dish)
+  end
+
+  def remove_from_favorite
+    @dish = Dish.find(params[:dish_id])
+    current_user.unfavorite(@dish)
+    redirect_to dish_path(@dish)
+  end
+
   private
 
   def dish_params
