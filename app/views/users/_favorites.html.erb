@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <% @favorites_dish.each do |dish| %>
+      <div class="col-sm-4 my-3">
+        <%= link_to dish_path(dish.id) do %>
+          <div class="card-dishes">
+            <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
+            <h2><%= dish.name %></h2>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
