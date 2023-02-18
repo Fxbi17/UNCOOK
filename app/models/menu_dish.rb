@@ -2,5 +2,5 @@ class MenuDish < ApplicationRecord
   belongs_to :dish
   belongs_to :menu
 
-  has_many :shopping_list
+  has_one :shopping_list
 end

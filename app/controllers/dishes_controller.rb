@@ -1,11 +1,5 @@
 class DishesController < ApplicationController
 
-  # def index
-  #   @dishes = Dish.all
-  # end
-
-# Search bar
-
   def new
     @dish = Dish.new
   end
