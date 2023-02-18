@@ -1,7 +1,9 @@
+/*========== Etoile add to Favorites ==========*/
 .text-yellow {
   color: $yellow
 }
 
+/*==========  ==========*/
 a {
   text-decoration: none;
   color: $my_orange_red;
@@ -9,4 +11,40 @@ a {
 
 a:hover {
   color: $my_blue_light;
+}
+
+/*========== DISH Show ==========*/
+.scroll {
+  overflow: scroll;
+  height: 700px;
+}
+
+/*========== Banner ==========*/
+.banner {
+  background: linear-gradient(135deg, rgba(56, 57, 59, 0.2) 0%, rgba(84, 82, 16, 0.4) 100%),
+  url(https://static.pexels.com/photos/326281/pexels-photo-326281.jpeg);
+  background-size: cover;
+  background-position: low low;
+  text-align: right;
+  padding: 300px 100px;
+  color: white;
+  width: 100%;
+}
+
+.button-medium {
+  color: #F6F6E9;
+  border: 3px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #f6F6E9;
+}
+
+.tab-content {
+  width: 100%;
 }

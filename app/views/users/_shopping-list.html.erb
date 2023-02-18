@@ -1,21 +1,8 @@
-<h1>Shopping List</h1>
-
-<h2>Ingredients</h2>
-
-<div>
-  <% if @shopping_list.empty?%>
-    <p>There are no ingredients in your shopping list.</p>
-  <% else %>
-    <ul>
-      <% @shopping_list.ingredients.each do |ingredient| %>
-        <li>
-          <%= check_box_tag "ingredients[]", ingredient.id, false %>
-          <%= label_tag "ingredients_#{ingredient.id}",
-          "#{ingredient.name}, (#{ingredient.quantity} #{ingredient.value})" %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
+<div class="my-3 mx-3">
+  <h3>Shopping-list</h3>
 </div>
 
-<%# <%= button_to "Update", update_shopping_list_path(@shopping_list), method: :put  %> %>
+<div class="banner">
+  <h1>Vos plats Favoris</h1>
+    <a href="#" class="button-medium"> <em>...</em> </a>
+</div>

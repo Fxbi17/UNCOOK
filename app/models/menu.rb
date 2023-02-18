@@ -1,5 +1,5 @@
 class Menu < ApplicationRecord
   belongs_to :user
 
-  has_many :menu_dish
+  has_one :menu_dish
 end

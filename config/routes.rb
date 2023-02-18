@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     get "add_to_favorite", to: "dishes#add_to_favorite"
     get "remove_from_favorite", to: "dishes#remove_from_favorite"
     resources :reviews, only: [:new, :create]
-  end
+    resources :menu_dishes, only: [:create]
 
+  end
+  # resources :menu, only: [:show]
 end
 
 
