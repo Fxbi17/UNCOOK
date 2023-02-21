@@ -10,3 +10,16 @@ class UsersController < ApplicationController
   end
 
 end
+
+
+# def create
+#   @ingredient_dishes = IngredientDish.new
+#   @ingredient_dishes.menu_dish = current_user.menu_dish
+#   @dish = Dish.find(params[:dish_id])
+#   @ingredient_dishes.dish = @dish
+#   @ingredient = Ingredient.find(params[:ingredient_id])
+#   @ingredient_dishes.ingredient = @ingredient
+#   if @ingredient_dishes.save
+#     redirect_to user_path(current_user)
+#   end
+# end

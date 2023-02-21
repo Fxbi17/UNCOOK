@@ -91,6 +91,10 @@
   border-radius: 50%;
 }
 
+.dish-img>img:hover{
+  transform: scale(1.1)
+}
+
 .dishes-card>.dish-title{
   font-family: sans-serif;
   margin: 20px 0;

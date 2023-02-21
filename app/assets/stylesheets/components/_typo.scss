@@ -48,3 +48,32 @@ a:hover {
 .tab-content {
   width: 100%;
 }
+
+.background-favorites {
+  background: $my_yellow;
+}
+
+
+/*========== Luffy ==========*/
+.mdl-tabs__panel{
+  animation-duration: 25s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+
+  @keyframes slidein {
+    from {
+      margin-left: 0%;
+      width: 300%;
+    }
+    75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+
+    to {
+      margin-left: 100%;
+      width: 100%;
+    }
+  }
+}
