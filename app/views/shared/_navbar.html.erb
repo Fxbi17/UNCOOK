@@ -19,12 +19,7 @@
         <% end %>
       </ul>
 
-      <%# <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search Dish" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> %>
-
-
+      <div>
         <%= form_with url: dishes_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
                               params[:query],
@@ -33,6 +28,8 @@
                               %>
           <%= submit_tag "Search", class: "btn btn-outline-success" %>
         <% end %>
+      </div>
+
 
     </div>
   </div>
