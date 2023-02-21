@@ -1,3 +1,35 @@
 
 
+  <% current_user.menu.menu_dishes.each do |menu_dish| %>
+    <%= menu_dish.dish.name %>
+  <% end %>
 
+<div class="container-menu_dish my-3 mx-3">
+
+    <div class="lower-dishes">
+      <% current_user.menu.menu_dishes.each do |menu_dish| %>
+        <div class="dishes-card">
+          <div class="dish-img">
+            <%= cl_image_tag menu_dish.dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
+          </div>
+          <div class="dish-title"><%= menu_dish.dish.name %></div>
+        </div>
+      <% end %>
+    </div>
+
+</div>
+
+<%# <%= link_to "Delete",
+  dish_menu_dish_path(@menu_dish),
+  data: {turbo_method: :delete, turbo_confirm: "Veux-tu vraiment supprimer ce repas ?"}
+%> 
+<br>
+
+<% current_user.menu.menu_dishes.each do |menu_dish| %>
+  <%= menu_dish.dish.name %>
+  <%= link_to "Delete",
+    dish_menu_dish_path(menu_dish),
+    # method: :delete,
+    # data: { confirm: "Êtes-vous sûr de vouloir supprimer ce plat ?", turbo_method: :delete}
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+<% end %>

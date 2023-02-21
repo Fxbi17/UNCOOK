@@ -23,14 +23,17 @@
         <input class="form-control me-2" type="search" placeholder="Search Dish" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> %>
-      <%= form_with url: dishes_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a Dish"
-        %>
-        <%= submit_tag "Search", class: "btn btn-outline-success" %>
-      <% end %>
+
+
+        <%= form_with url: dishes_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+                              params[:query],
+                              class: "form-control",
+                              placeholder: "Find a Dish"
+                              %>
+          <%= submit_tag "Search", class: "btn btn-outline-success" %>
+        <% end %>
+
     </div>
   </div>
 </nav>

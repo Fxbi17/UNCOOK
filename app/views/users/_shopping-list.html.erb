@@ -2,7 +2,19 @@
   <h3>Shopping-list</h3>
 </div>
 
-<div class="banner">
+<%# <div class="banner">
   <h1>Vos plats Favoris</h1>
     <a href="#" class="button-medium"> <em>...</em> </a>
-</div>
+</div> %>
+
+<%# menu_dish.dish.ingredient.name / ingredient_dish.quantity %>
+
+  <% current_user.menu.menu_dishes.each do |menu_dish| %>
+    <%= menu_dish.dish.name %>
+  <% end %>
+
+  <%# <% @dish.ingredient_dish.menu.menu_dishes.each do |ingredient_dish| %>
+  <%# <% current_user.menu.menu_dishes.ingredient_dish(es).each do |ingredient_dish| %>
+  <%# <% @menu_dishes.ingredient_dishes.each do |ingredient_dish| %> %>
+    <%# <p><%= ingredient_dish.ingredient.quantity <%= ingredient_dish.ingredient.name %></p> %> %>
+  <%# <% end %> %>
