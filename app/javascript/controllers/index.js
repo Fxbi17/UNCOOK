@@ -7,5 +7,3 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import SearchDishesController from "./search_dishes_controller"
-application.register("search-dishes", SearchDishesController)

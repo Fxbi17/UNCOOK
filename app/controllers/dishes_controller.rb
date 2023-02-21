@@ -1,18 +1,5 @@
 class DishesController < ApplicationController
 
-  def new
-    @dish = Dish.new
-  end
-
-  def create
-    @dish = Dish.new(dish_params)
-    if @dish.save
-      redirect_to dish_path(@dish)
-    else
-      render :new
-    end
-  end
-
   def index
     if params[:query].present?
       @dishes = Dish.where("name ILIKE ?", "%#{params[:query]}%")
