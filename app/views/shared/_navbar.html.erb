@@ -24,16 +24,19 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> %>
 
-
-        <%= form_with url: dishes_path, method: :get, class: "d-flex" do %>
+      <div data-controller="search-dishes">
+        <%= form_with url: dishes_path, method: :get, class: "d-flex", data: {search_dishes_target: "form"} do %>
           <%= text_field_tag :query,
                               params[:query],
                               class: "form-control",
-                              placeholder: "Find a Dish"
-                              %>
+                              placeholder: "Find a Dish",
+                              data: {
+                                search_dishes_target: "input",
+                                action: "keyup->search-dishes#update"
+                                } %>
           <%= submit_tag "Search", class: "btn btn-outline-success" %>
         <% end %>
-
+      </div>
     </div>
   </div>
 </nav>

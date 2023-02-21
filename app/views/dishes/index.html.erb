@@ -3,7 +3,7 @@
   <%# <%= link_to "Add a new dishes", new_dishes_path %>
 </div>
 
-<div class="row text-center p-5">
+<div data-search-dishes-target="list", class="row text-center p-5" >
   <% @dishes.each do |dish| %>
     <div class="col-lg-4">
       <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
