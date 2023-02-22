@@ -135,53 +135,53 @@ p 'Ingredients created'
 p "Creating links between Dishes and Ingredients"
 # ingredients_pizza = [pizza_dough, pizza_sauce, mozza, pepperoni, mushrooms, green_pepper]
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: pizza_dough.id, quantity: "1")
-IngredientDish.create!(dish_id: dish1.id, ingredient_id: pizza_sauce.id, quantity: "200g")
-IngredientDish.create!(dish_id: dish1.id, ingredient_id: mozza.id, quantity: "250g")
-IngredientDish.create!(dish_id: dish1.id, ingredient_id: pepperoni.id, quantity: "150g")
-IngredientDish.create!(dish_id: dish1.id, ingredient_id: mushrooms.id, quantity: "230g")
+IngredientDish.create!(dish_id: dish1.id, ingredient_id: pizza_sauce.id, quantity: "200 g")
+IngredientDish.create!(dish_id: dish1.id, ingredient_id: mozza.id, quantity: "250 g")
+IngredientDish.create!(dish_id: dish1.id, ingredient_id: pepperoni.id, quantity: "150 g")
+IngredientDish.create!(dish_id: dish1.id, ingredient_id: mushrooms.id, quantity: "230 g")
 IngredientDish.create!(dish_id: dish1.id, ingredient_id: green_pepper.id, quantity: "1")
 
 # ingredients_pasta = [pasta, salt, marinara_sauce, parmesan]
-IngredientDish.create!(dish_id: dish2.id, ingredient_id: pasta.id, quantity: "180g")
+IngredientDish.create!(dish_id: dish2.id, ingredient_id: pasta.id, quantity: "180 g")
 IngredientDish.create!(dish_id: dish2.id, ingredient_id: salt.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish2.id, ingredient_id: marinara_sauce.id, quantity: "600g")
-IngredientDish.create!(dish_id: dish2.id, ingredient_id: parmesan.id, quantity: "100g")
+IngredientDish.create!(dish_id: dish2.id, ingredient_id: marinara_sauce.id, quantity: "600 g")
+IngredientDish.create!(dish_id: dish2.id, ingredient_id: parmesan.id, quantity: "100 g")
 
 # ingredients_risotto = [oil, onion, rice, wine, broth, salt, pepper, peas, parmesan]
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: oil.id, quantity: "2 tbsp")
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: onion.id, quantity: "1")
-IngredientDish.create!(dish_id: dish3.id, ingredient_id: rice.id, quantity: "400g")
-IngredientDish.create!(dish_id: dish3.id, ingredient_id: wine.id, quantity: "5cl")
-IngredientDish.create!(dish_id: dish3.id, ingredient_id: broth.id, quantity: "1.5L")
+IngredientDish.create!(dish_id: dish3.id, ingredient_id: rice.id, quantity: "400 g")
+IngredientDish.create!(dish_id: dish3.id, ingredient_id: wine.id, quantity: "5 cl")
+IngredientDish.create!(dish_id: dish3.id, ingredient_id: broth.id, quantity: "1.5 L")
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: salt.id, quantity: "1 pinch")
 IngredientDish.create!(dish_id: dish3.id, ingredient_id: pepper.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish3.id, ingredient_id: peas.id, quantity: "70g")
-IngredientDish.create!(dish_id: dish3.id, ingredient_id: parmesan.id, quantity: "60g")
+IngredientDish.create!(dish_id: dish3.id, ingredient_id: peas.id, quantity: "70 g")
+IngredientDish.create!(dish_id: dish3.id, ingredient_id: parmesan.id, quantity: "60 g")
 
 # ingredients_cacio = [spaghetti, salt, pecorino, pepper]
-IngredientDish.create!(dish_id: dish4.id, ingredient_id: spaghetti.id, quantity: "400g")
+IngredientDish.create!(dish_id: dish4.id, ingredient_id: spaghetti.id, quantity: "400 g")
 IngredientDish.create!(dish_id: dish4.id, ingredient_id: salt.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish4.id, ingredient_id: pecorino.id, quantity: "160g")
+IngredientDish.create!(dish_id: dish4.id, ingredient_id: pecorino.id, quantity: "160 g")
 IngredientDish.create!(dish_id: dish4.id, ingredient_id: pepper.id, quantity: "2 tbsp")
 
 # ingredients_lasagna = [salt, lasagna, beef, onion, tomato_sauce, italian, garlic, ricotta, mozza, parmesan]
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: salt.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish5.id, ingredient_id: lasagna.id, quantity: "230g")
-IngredientDish.create!(dish_id: dish5.id, ingredient_id: beef.id, quantity: "450g")
-IngredientDish.create!(dish_id: dish5.id, ingredient_id: onion.id, quantity: "1/2")
+IngredientDish.create!(dish_id: dish5.id, ingredient_id: lasagna.id, quantity: "230 g")
+IngredientDish.create!(dish_id: dish5.id, ingredient_id: beef.id, quantity: "450 g")
+IngredientDish.create!(dish_id: dish5.id, ingredient_id: onion.id, quantity: "0.5")
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: tomato_sauce.id, quantity: "1 can")
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: italian.id, quantity: "1 tbsp")
 IngredientDish.create!(dish_id: dish5.id, ingredient_id: garlic.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish5.id, ingredient_id: ricotta.id, quantity: "425g")
-IngredientDish.create!(dish_id: dish5.id, ingredient_id: mozza.id, quantity: "680g")
-IngredientDish.create!(dish_id: dish5.id, ingredient_id: parmesan.id, quantity: "115g")
+IngredientDish.create!(dish_id: dish5.id, ingredient_id: ricotta.id, quantity: "425 g")
+IngredientDish.create!(dish_id: dish5.id, ingredient_id: mozza.id, quantity: "680 g")
+IngredientDish.create!(dish_id: dish5.id, ingredient_id: parmesan.id, quantity: "115 g")
 
 # ingredients_tiramisu = [yolk, sugar, mascarpone, coffee, ladyfingers, cocoa]
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: yolk.id, quantity: "4")
-IngredientDish.create!(dish_id: dish6.id, ingredient_id: sugar.id, quantity: "100g")
-IngredientDish.create!(dish_id: dish6.id, ingredient_id: mascarpone.id, quantity: "500g")
-IngredientDish.create!(dish_id: dish6.id, ingredient_id: coffee.id, quantity: "300ml")
-IngredientDish.create!(dish_id: dish6.id, ingredient_id: ladyfingers.id, quantity: "300g")
+IngredientDish.create!(dish_id: dish6.id, ingredient_id: sugar.id, quantity: "100 g")
+IngredientDish.create!(dish_id: dish6.id, ingredient_id: mascarpone.id, quantity: "500 g")
+IngredientDish.create!(dish_id: dish6.id, ingredient_id: coffee.id, quantity: "300 ml")
+IngredientDish.create!(dish_id: dish6.id, ingredient_id: ladyfingers.id, quantity: "300 g")
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: cocoa.id, quantity: "1 tbsp")
 
 p "Links between Dishes and Ingredients created"
