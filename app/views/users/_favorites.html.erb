@@ -9,21 +9,15 @@
               <div class="card-dishes">
                 <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
                 <div class="card-dish-name"><h2><%= dish.name %></h2></div>
-
-                <%# <a href="menu_dishes_path" class="button favoris__button"><i class='bx bx-cart-alt'></i></a> %>
                 <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
                   <i class='bx bx-cart-alt'></i>
                 <% end %>
-
               </div>
             <% end %>
           </div>
         <% end %>
       </div>
   </div>
-
-
-
 
   <!--========== Favoris-1 ==========-->
   <section class="favoris-section bd-container" id="favoris">
@@ -35,12 +29,9 @@
           </div>
             <h3 class="favoris__name"><%= dish.name %></h3>
             <span class="favoris__detail">Delicious dish</span>
-
-            <%# <a href="#" class="button favoris__button"><i class='bx bx-cart-alt'></i></a> %>
             <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
               <i class='bx bx-cart-alt'></i>
             <% end %>
-
         </div>
       <% end %>
     </div>
@@ -54,12 +45,9 @@
           <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
         </div>
         <div class="dish-title"><%= dish.name %></div>
-
-        <%# <a href="#" class="button favoris__button"><i class='bx bx-cart-alt'></i></a> %>
         <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
           <i class='bx bx-cart-alt'></i>
         <% end %>
-
       </div>
     <% end %>
   </div>
