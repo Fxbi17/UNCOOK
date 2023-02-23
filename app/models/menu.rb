@@ -29,6 +29,9 @@ class Menu < ApplicationRecord
     str_1 = hash[ing_dish.ingredient.name].to_f
     str_2 = ing_dish.quantity.split(" ").first.to_f
     str_3 = (str_1 + str_2).to_s
+    if str_3.split(".").last == "0"
+      str_3 = str_3.to_i.to_s
+    end
     hash[ing_dish.ingredient.name] = str_3
   end
 
