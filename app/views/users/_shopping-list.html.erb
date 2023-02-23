@@ -1,17 +1,15 @@
-<div class="my-3 mx-3">
-  <h3>Shopping-list</h3>
-</div>
+<div class="container">
+  <div class="my-3 mx-3">
+    <h3>Shopping-list</h3>
+  </div>
 
-  <% current_user.menu.menu_dishes.each do |menu_dish| %>
-    <%= menu_dish.dish.name %>
-  <% end %>
-
-  <br>
-
-<div class="overflow-auto">
-  <% current_user.menu.menu_dishes.each do |menu_dish| %>
-    <% menu_dish.dish.ingredient_dish.each do |ing_dish| %>
-    <p><%= ing_dish.quantity %> <%= ing_dish.ingredient.name %></p>
-    <% end %>
+  <% current_user.menu.shopping_list.each do |name, quantity| %>
+    <p><input type="checkbox"> <%= name %>: <%= quantity %></p>
   <% end %>
 </div>
+
+  <%# <% current_user.menu.menu_dishes.each do |menu_dish|
+    <%# <% menu_dish.dish.ingredient_dish.each do |ing_dish| %>
+    <%# <p><%= ing_dish.quantity <%= ing_dish.ingredient.name %>
+    <%# <% end %>
+  <%# <% end %> 

@@ -1,80 +1,82 @@
-<div class="container-menu_dish my-3 mx-3">
+<div data-controller="sortable">
+  <div class="container-menu_dish my-3 mx-3">
 
-    <div class="lower-dishes" data-controller="sortable">
-      <% current_user.menu.menu_dishes.each do |menu_dish| %>
-        <div class="dishes-card">
-          <div class="dish-img">
-            <%= cl_image_tag menu_dish.dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
+      <div class="lower-dishes" data-sortable-target="list">
+        <% current_user.menu.menu_dishes.each do |menu_dish| %>
+          <div class="dishes-card">
+            <div class="dish-img">
+              <%= cl_image_tag menu_dish.dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
+            </div>
+            <div class="dish-title">
+              <%= menu_dish.dish.name %>
+            </div>
+            <div class="dish-delete">
+              <%= link_to "Delete", #<i class="fa-solid fa-trash-can"></i>
+                dish_menu_dish_path(menu_dish.dish_id, menu_dish.id),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+            </div>
           </div>
-          <div class="dish-title">
-            <%= menu_dish.dish.name %>
-          </div>
-          <div class="dish-delete">
-            <%= link_to "Delete", #<i class="fa-solid fa-trash-can"></i>
-              dish_menu_dish_path(menu_dish.dish_id, menu_dish.id),
-              data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+
+  </div>
+
+  <br>
+
+  <div class="container">
+    <table class="table table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Midi</th>
+          <th scope="col">Soir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" >Lundi</th>
+          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list"></td></td>
+        </tr>
+        <tr>
+          <th scope="row">Mardi</th>
+          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list"></td>
+        </tr>
+        <tr>
+          <th scope="row">Mercredi</th>
+          <td data-sortable-target="list"></li></td>
+          <td data-sortable-target="list"></li></td>
+        </tr>
+        <tr>
+          <th scope="row">Jeudi</th>
+          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list"></td>
+        </tr>
+        <tr>
+          <th scope="row">Vendredi</th>
+          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list"></td>
+        </tr>
+        <tr>
+          <th scope="row">Samedi</th>
+          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list"></td>
+        </tr>
+        <tr>
+          <th scope="row">Dimanche</th>
+          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>
 
-<br>
-
-
-<section class="mt-16">
-  <ul data-controller="sortable" data-sortable-animation-value="150">
-    <li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li>
-    <li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li>
-  </ul>
-</section>
-
-<div class="container">
-  <table class="table table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Midi</th>
-        <th scope="col">Soir</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Lundi</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-      </tr>
-      <tr>
-        <th scope="row">Mardi</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-      </tr>
-      <tr>
-        <th scope="row">Mercredi</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-      </tr>
-      <tr>
-        <th scope="row">Jeudi</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-      </tr>
-      <tr>
-        <th scope="row">Vendredi</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-      </tr>
-      <tr>
-        <th scope="row">Samedi</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-      </tr>
-      <tr>
-        <th scope="row">Dimanche</th>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li></td>
-        <td><li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <section class="mt-16">
+    <ul>
+      <li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li>
+      <li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li>
+    </ul>
+  </section>
