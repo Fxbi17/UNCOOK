@@ -38,13 +38,12 @@
           <li>
             <%= review.rating %>⭐
             <%= review.content %>
-          </li><br>
+          </li>
         <% end %>
       </ul>
     </div>
-    <div class="col-md-7 mt-5">
+    <div class=" rounded col-md-7 mt-5">
       <%= cl_image_tag @dish.photo.key, height: 700, width:700, crop: :fill %>
     </div>
   </div>
 </div>
-

@@ -1,98 +1,83 @@
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="banner">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "1.jpg" %>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Sign up and start organizing your meals!</h1>
+            <p>Join our community and access exclusive features to make meal planning a breeze</p>
+            <%= link_to "Sign up now", "#", class: "btn btn-flat" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <%= image_tag "2.jpg" %>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Explore our dishes list</h1>
+            <p>Find your next favorite dish among our curated collection of recipes for every occasion</p>
+            <%= link_to "View dishes", "/dishes", class: "btn btn-flat" %>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "3.jpg" %>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Simplify your grocery shopping</h1>
+            <p>Create a shopping list from your weekly meal plan and save time and money at the store.</p>
+            <%= link_to "Create your shopping list", "#", class: "btn btn-flat" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <rect width="100%" height="100%" fill="#f2a449"/>
-      </svg>
-
-      <div class="container">
-        <div class="carousel-caption text-start">
-          <h1>Example headline.</h1>
-          <p>Some representative placeholder content for the first slide of the carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <rect width="100%" height="100%" fill="#e87136"/>
-      </svg>
-
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Another example headline.</h1>
-          <p>Some representative placeholder content for the second slide of the carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <rect width="100%" height="100%" fill="#f2a449"/>
-      </svg>
-
-      <div class="container">
-        <div class="carousel-caption text-end">
-          <h1>One more for good measure.</h1>
-          <p>Some representative placeholder content for the third slide of this carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-
-
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
-
 <div class="container marketing">
-  <h1 style="text-align: center">Dishes of the week</h1><br>
-  <!-- Three columns of text below the carousel -->
-  <div class="row">
-    <% @dishes.each do |dish| %>
-      <div class="col-lg-4">
-        <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
-        <h2><%= dish.name %></h2>
-        <p><%= dish.description.html_safe %></p>
-        <p><a class="btn btn-secondary" href="/dishes/<%= dish.id %>">Recipe &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    <% end %>
-  </div>
-</div><!-- /.row -->
-<%# </div><!-- /.container marketing --> %>
-
+  <h1 style="text-align: center">Get Ready to Savor Our Weekly Meal Selection</h1><br>
+  <section class="hero-section">
+    <div class="card-grid">
+      <% @dishes.each do |dish| %>
+        <%= link_to dish_path(dish), class: "card" do %>
+          <%= cl_image_tag dish.photo.key, crop: :fill, class: "card__background" %>
+          <div class="card__content">
+            <p class="card__category"><h2><%= dish.name %></h2></p>
+            <p class="card__heading"><%= dish.description.html_safe %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+</div>
 <!-- START THE FEATURETTES -->
 <div class="container">
   <hr class="featurette-divider">
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-      <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      <h2 class="featurette-heading">Find the perfect meals to satisfy your cravings <span class="text-muted">and impress your loved ones</span></h2>
+      <p class="lead">Welcome to our meal planning app! Our mission is to make meal planning and grocery shopping as simple and enjoyable as possible. With our extensive selection of mouth-watering recipes, you can easily find the perfect dishes to suit your tastes and preferences. Whether you're looking for easy weeknight meals or impressive dishes for special occasions, our recipe library has got you covered. Browse our collection and discover new favorites that you'll want to make again and again!</p>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#eee"/>
-        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-      </svg>
+      <%= image_tag "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", class:"imghome", alt: "Vegetables", width: "500", height: "500"  %>
     </div>
   </div>
 
@@ -100,16 +85,11 @@
 
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-      <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      <h2 class="featurette-heading">Stay on top of your busy schedule <span class="text-muted">with a custom meal plan for the week</span></h2>
+      <p class="lead">We understand that planning your weekly meals can be a daunting task, which is why we've made it easy and stress-free. With our app, you can easily organize your favorite meals into a weekly meal plan that fits your schedule and lifestyle. Whether you prefer to cook every night or batch cook on the weekends, our app makes it easy to stay on track and avoid the last-minute scramble. With just a few clicks, you can plan your meals for the week and be prepared for whatever life throws your way.</p>
     </div>
     <div class="col-md-5 order-md-1">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#eee"/>
-        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-      </svg>
+      <%= image_tag "https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", class:"imghome", alt:"this is a dish", width:"500", height:"500" %>
     </div>
   </div>
 
@@ -117,19 +97,11 @@
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-      <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      <h2 class="featurette-heading">Shop with confidence knowing you have everything you need <span class="text-muted">for your weekly meals</span></h2>
+      <p class="lead text-justify">We know that grocery shopping can be a hassle, which is why we've created a personalized shopping list that makes it easy and stress-free. After creating your weekly meal plan, our app generates a custom shopping list that includes all the ingredients you need for the week. Say goodbye to the days of wandering the grocery store aisles and wondering what to buy. With our app, you can shop with confidence, knowing that you have everything you need for your meals. Plus, with a shopping list that's tailored to your needs, you'll save time and money by avoiding unnecessary purchases and trips to the store.</p>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#eee"/>
-        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-      </svg>
+      <%= image_tag "https://images.pexels.com/photos/3985055/pexels-photo-3985055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", class: "imghome", alt:"this is a dish", width:"500", height:"500" %>
     </div>
   </div>
-
-  <hr class="featurette-divider">
 </div>
-<!-- /END THE FEATURETTES -->
