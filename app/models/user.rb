@@ -22,4 +22,8 @@ class User < ApplicationRecord
   def menu_dishes_positionned
     menu.menu_dishes.where.not(position: nil)
   end
+
+  def find_menu_dish_from_position(position)
+    menu_dishes_positionned.find_by(position: position)
+  end
 end

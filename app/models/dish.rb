@@ -1,6 +1,6 @@
 class Dish < ApplicationRecord
   has_many :menu_dish, dependent: :destroy
-  has_many :ingredient_dish
+  has_many :ingredient_dish, dependent: :destroy
   has_many :reviews, dependent: :destroy
 
   has_one_attached :photo
