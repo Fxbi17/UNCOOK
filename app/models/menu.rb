@@ -1,7 +1,7 @@
 class Menu < ApplicationRecord
   belongs_to :user
 
-  has_many :menu_dishes, dependent: :destroy
+  has_many :menu_dishes, -> { order(position: :asc) }, dependent: :destroy
 
   def shopping_list
     hash = Hash.new

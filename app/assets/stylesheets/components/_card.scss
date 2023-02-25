@@ -1,17 +1,17 @@
 
 .card-dishes {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 14rem;
-  height: 16rem;
   background-color: #FFFFFF;
-  margin-right: 20px;
   border-radius: 12px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  justify-content: center;
+  margin-right: 20px;
+  position: relative;
   text-decoration: none;
+  width: 20rem;
 //   box-shadow:
 //     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 //     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -35,6 +35,6 @@
 
 
 .card-dish-name {
-  margin: 20px 0;
   font-weight: bold;
+  margin: 20px 0;
 }

@@ -9,25 +9,25 @@
 }
 
 .favoris__content{
-  position: relative;
-  display: flex;
-  flex-direction: column;
   background-color: #FFFFFF;
   border-radius: .5rem;
   box-shadow: 0 2px 4px rgba(3,74,40,.15);
+  display: flex;
+  flex-direction: column;
   padding: .75rem;
+  position: relative;
 }
 
 .favoris__img{
-  width: 100px;
   align-self: center;
   margin-bottom: 1rem;
+  width: 100px;
 }
 
 .favoris__name {
-  font-weight: 600;
   color: #e87136;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .favoris__detail {
@@ -36,20 +36,20 @@
 }
 
 .favoris__button{
-  position: absolute;
   bottom: 0;
-  right: 0;
+  border-radius: .5rem 0 .5rem 0;
   display: flex;
   padding: .625rem .813rem;
-  border-radius: .5rem 0 .5rem 0;
+  position: absolute;
+  right: 0;
 }
 
 /*========== LAYOUT ==========*/
 .bd-container{
-  max-width: 960px;
-  width: calc(100% - 2rem);
   margin-left: 1rem;
   margin-right: 1rem;
+  max-width: 960px;
+  width: calc(100% - 2rem);
 }
 
 .bd-grid{
@@ -65,30 +65,30 @@
 }
 
 .dishes-card{
-  position: relative;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
   height: 220px;
-  background-color: #FFFFFF;
+  justify-content: center;
   margin-right: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12);
+  position: relative;
+  width: 180px;
 }
 
 .dish-img>img{
+  border-radius: 50%;
   height:100px;
   width:100px;
-  border-radius: 50%;
 }
 
 .dish-img>img:hover{
@@ -97,6 +97,6 @@
 
 .dishes-card>.dish-title{
   font-family: sans-serif;
-  margin: 20px 0;
   font-weight: bold;
+  margin: 20px 0;
 }
