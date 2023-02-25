@@ -3,6 +3,8 @@
 
 p "Cleaning database"
 User.destroy_all
+Menu.destroy_all
+MenuDish.destroy_all
 IngredientDish.destroy_all
 Dish.destroy_all
 Ingredient.destroy_all
