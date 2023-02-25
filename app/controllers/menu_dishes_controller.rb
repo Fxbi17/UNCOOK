@@ -15,4 +15,16 @@ class MenuDishesController < ApplicationController
     @menu_dish.destroy
     redirect_to user_path(current_user), status: :see_other
   end
+
+  def move
+    @menu_dish = MenuDish.find(params[:id])
+    @menu_dish.insert_at(params[:position].to_i)
+    head :ok
+  end
+
+  private
+
+  def menu_dish_params
+    params.require(:menu_dish).permit(:position)
+  end
 end

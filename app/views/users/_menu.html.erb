@@ -1,9 +1,9 @@
-<div data-controller="sortable">
+<div data-controller="sortable" data-sortable-url="/dishes/:dish_id/menu_dishes/:id/move">
   <div class="container-menu_dish my-3 mx-3">
 
       <div class="lower-dishes" data-sortable-target="list">
         <% current_user.menu.menu_dishes.each do |menu_dish| %>
-          <div class="dishes-card">
+          <div class="dishes-card" data-id="<%= menu_dish.id %>" data-dish-id="<%= menu_dish.dish.id%>">
             <div class="dish-img">
               <%= cl_image_tag menu_dish.dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
             </div>
@@ -35,48 +35,41 @@
       <tbody>
         <tr>
           <th scope="row" >Lundi</th>
-          <td data-sortable-target="list"></td>
-          <td data-sortable-target="list"></td></td>
+          <td data-sortable-target="list" data-position="1"></td>
+          <td data-sortable-target="list" data-position="2"></td></td>
         </tr>
         <tr>
           <th scope="row">Mardi</th>
-          <td data-sortable-target="list"></td>
-          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list" data-position="3"></td>
+          <td data-sortable-target="list" data-position="4"></td>
         </tr>
         <tr>
           <th scope="row">Mercredi</th>
-          <td data-sortable-target="list"></li></td>
-          <td data-sortable-target="list"></li></td>
+          <td data-sortable-target="list" data-position="5"></li></td>
+          <td data-sortable-target="list" data-position="6"></li></td>
         </tr>
         <tr>
           <th scope="row">Jeudi</th>
-          <td data-sortable-target="list"></td>
-          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list" data-position="7"></td>
+          <td data-sortable-target="list" data-position="8"></td>
         </tr>
         <tr>
           <th scope="row">Vendredi</th>
-          <td data-sortable-target="list"></td>
-          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list" data-position="9"></td>
+          <td data-sortable-target="list" data-position="10"></td>
         </tr>
         <tr>
           <th scope="row">Samedi</th>
-          <td data-sortable-target="list"></td>
-          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list" data-position="11"></td>
+          <td data-sortable-target="list" data-position="12"></td>
         </tr>
         <tr>
           <th scope="row">Dimanche</th>
-          <td data-sortable-target="list"></td>
-          <td data-sortable-target="list"></td>
+          <td data-sortable-target="list" data-position="13"></td>
+          <td data-sortable-target="list" data-position="14"></td>
         </tr>
       </tbody>
     </table>
   </div>
 
 </div>
-
-  <section class="mt-16">
-    <ul>
-      <li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Pet the cat</li>
-      <li class="block mb-4 p-4 border border-3 border-gray-600 rounded-sm cursor-move">Get the groceries</li>
-    </ul>
-  </section>
