@@ -1,45 +1,18 @@
 <div class= "container text-center p-5">
-  <div class ="mt-5"><h1>Dishes</h1></div>
+  <div class ="mt-5"><h1>Never Run Out of Meal Ideas Again</h1></div>
   <%# <%= link_to "Add a new dishes", new_dishes_path %>
 </div>
 
-<div class="row text-center p-5" >
-  <% @dishes.each do |dish| %>
-    <div class="col-lg-4">
-      <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
-      <h2><%= dish.name %></h2>
-      <p><%= dish.numpers %> serving</p>
-      <p><%= dish.description.html_safe %></p>
-      <p><a class="btn btn-secondary" href="/dishes/<%= dish.id %>">Recipe &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-  <% end %>
-</div>
-
-<div data-controller="cards">
-  <div id="cards" data-cards-target="hover-effect">
-    <div class="card">
-      <div class="card-border"></div>
-      <div class="card-content"></div>
-    </div>
-    <div class="card">
-      <div class="card-border"></div>
-      <div class="card-content"></div>
-    </div>
-    <div class="card">
-      <div class="card-border"></div>
-      <div class="card-content"></div>
-    </div>
-    <div class="card">
-      <div class="card-border"></div>
-      <div class="card-content"></div>
-    </div>
-    <div class="card">
-      <div class="card-border"></div>
-      <div class="card-content"></div>
-    </div>
-    <div class="card">
-      <div class="card-border"></div>
-      <div class="card-content"></div>
-    </div>
+<section class="hero-section">
+  <div class="card-grid">
+    <% @dishes.each do |dish| %>
+      <%= link_to dish_path(dish), class: "card" do %>
+        <%= cl_image_tag dish.photo.key, crop: :fill, class: "card__background" %>
+        <div class="card__content">
+          <p class="card__category"><h2><%= dish.name %></h2></p>
+          <p class="card__heading"><%= dish.description.html_safe %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-</div>
+</section>
