@@ -3,7 +3,6 @@ class Menu < ApplicationRecord
 
   has_many :menu_dishes, -> { order(position: :asc) }, dependent: :destroy
 
-
   def shopping_list
     hash = Hash.new
     menu_dishes.each do |menu_dish|

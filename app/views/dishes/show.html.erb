@@ -5,11 +5,11 @@
         <h1><%= @dish.name %>
 
           <% if current_user.favorited?(@dish) %>
-              <%= link_to dish_remove_from_favorite_path(@dish), class: "text-decoration-none text-yellow" do %>
+              <%= link_to dish_remove_from_favorite_path(@dish), class: "text-yellow" do %>
                 <i class="fas fa-star"></i>
               <% end %>
           <% else %>
-            <%= link_to dish_add_to_favorite_path(@dish), class: "text-decoration-none text-yellow" do %>
+            <%= link_to dish_add_to_favorite_path(@dish), class: "text-yellow" do %>
               <i class="far fa-star"></i>
             <% end %>
           <% end %>
