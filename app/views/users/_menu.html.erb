@@ -2,8 +2,10 @@
   <div class="container-menu_dish my-3 mx-3">
 
       <div class="lower-dishes" data-sortable-target="list">
-        <% current_user.menu_dishes_not_positionned.each do |menu_dish| %>
-          <%= render "card", menu_dish: menu_dish %>
+        <% if current_user.menu_dishes_not_positionned.present? %>
+          <% current_user.menu_dishes_not_positionned.each do |menu_dish| %>
+            <%= render "card", menu_dish: menu_dish %>
+          <% end %>
         <% end %>
       </div>
 
@@ -12,10 +14,10 @@
   <br>
 
   <div class="container">
-    <table class="table table table-striped table-bordered">
+    <table class="table table-striped table-bordered">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col"></th>
           <th scope="col">Midi</th>
           <th scope="col">Soir</th>
         </tr>
@@ -24,68 +26,67 @@
         <tr>
           <th scope="row" >Lundi</th>
           <td data-sortable-target="list" data-position="1">
-            <%= render "card", menu_dish: current_user.menu_dishes_positionned.order(position: :asc)[0] if current_user&.menu_dishes_positionned.order(position: :asc)[0].present?  %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(1) if current_user.find_menu_dish_from_position(1).present? %>
           </td>
           <td data-sortable-target="list" data-position="2">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[1] if current_user&.menu_dishes_positionned.order(position: :asc)[1].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(2) if current_user.find_menu_dish_from_position(2).present?%>
           </td>
         </tr>
         <tr>
           <th scope="row">Mardi</th>
           <td data-sortable-target="list" data-position="3">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[2] if current_user&.menu_dishes_positionned.order(position: :asc)[2].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(3) if current_user.find_menu_dish_from_position(3).present? %>
           </td>
           <td data-sortable-target="list" data-position="4">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[3] if current_user&.menu_dishes_positionned.order(position: :asc)[3].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(4) if current_user.find_menu_dish_from_position(4).present? %>
           </td>
         </tr>
         <tr>
           <th scope="row">Mercredi</th>
           <td data-sortable-target="list" data-position="5">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[4] if current_user&.menu_dishes_positionned.order(position: :asc)[4].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(5) if current_user.find_menu_dish_from_position(5).present? %>
           </td>
           <td data-sortable-target="list" data-position="6">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[5] if current_user&.menu_dishes_positionned.order(position: :asc)[5].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(6) if current_user.find_menu_dish_from_position(6).present? %>
           </td>
         </tr>
         <tr>
           <th scope="row">Jeudi</th>
           <td data-sortable-target="list" data-position="7">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[6] if current_user&.menu_dishes_positionned.order(position: :asc)[6].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(7) if current_user.find_menu_dish_from_position(7).present? %>
           </td>
           <td data-sortable-target="list" data-position="8">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[7] if current_user&.menu_dishes_positionned.order(position: :asc)[7].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(8) if current_user.find_menu_dish_from_position(8).present? %>
           </td>
         </tr>
         <tr>
           <th scope="row">Vendredi</th>
           <td data-sortable-target="list" data-position="9">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[8] if current_user&.menu_dishes_positionned.order(position: :asc)[8].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(9) if current_user.find_menu_dish_from_position(9).present? %>
           </td>
           <td data-sortable-target="list" data-position="10">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[9] if current_user&.menu_dishes_positionned.order(position: :asc)[9].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(10) if current_user.find_menu_dish_from_position(10).present? %>
           </td>
         </tr>
         <tr>
           <th scope="row">Samedi</th>
           <td data-sortable-target="list" data-position="11">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[10] if current_user&.menu_dishes_positionned.order(position: :asc)[10].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(11) if current_user.find_menu_dish_from_position(11).present? %>
           </td>
           <td data-sortable-target="list" data-position="12">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[11] if current_user&.menu_dishes_positionned.order(position: :asc)[11].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(12) if current_user.find_menu_dish_from_position(12).present? %>
           </td>
         </tr>
         <tr>
           <th scope="row">Dimanche</th>
           <td data-sortable-target="list" data-position="13">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[12] if current_user&.menu_dishes_positionned.order(position: :asc)[12].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(13) if current_user.find_menu_dish_from_position(13).present? %>
           </td>
           <td data-sortable-target="list" data-position="14">
-            <%= render "card", menu_dish: current_user&.menu_dishes_positionned.order(position: :asc)[13] if current_user&.menu_dishes_positionned.order(position: :asc)[13].present? %>
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(14) if current_user.find_menu_dish_from_position(14).present? %>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-
 </div>

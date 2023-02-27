@@ -1,1 +1,13 @@
-
+.table {
+  width: 200%;
+  text-align: center;
+  tbody {
+    vertical-align: middle;
+    td {
+      height: 235px;
+      .dishes-card {
+        margin-left: 30%;
+      }
+    }
+  }
+}
