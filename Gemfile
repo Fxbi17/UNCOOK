@@ -51,6 +51,7 @@ gem "sassc-rails"
 gem "cloudinary"
 
 gem 'acts_as_favoritor'
+gem 'acts_as_list'
 
 gem "devise"
 gem "autoprefixer-rails"

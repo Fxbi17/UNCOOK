@@ -1,0 +1,7 @@
+<div class="dishes-card" data-id="<%= menu_dish.id %>" data-dish-id="<%= menu_dish.dish.id%>">
+  <%= cl_image_tag menu_dish.dish.photo.key, height: 140, width: 140, crop: :fill, class: "dish-img" %>
+  <p class="dish-title"><%= menu_dish.dish.name %></p>
+  <%= link_to "Delete",
+      dish_menu_dish_path(menu_dish.dish_id, menu_dish.id), class: "dish-delete",
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+</div>

@@ -76,6 +76,8 @@ GEM
       tzinfo (~> 2.0)
     acts_as_favoritor (6.0.0)
       activerecord (>= 5.0)
+    acts_as_list (1.1.0)
+      activerecord (>= 4.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (10.4.7.0)
@@ -272,6 +274,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_favoritor
+  acts_as_list
   autoprefixer-rails
   bootsnap
   capybara
