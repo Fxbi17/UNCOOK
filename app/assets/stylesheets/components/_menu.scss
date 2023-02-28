@@ -1,12 +1,61 @@
-.table {
-  width: 200%;
-  text-align: center;
-  tbody {
-    vertical-align: middle;
-    td {
-      height: 235px;
-      .dishes-card {
-        margin-left: 30%;
+#nav-menu {
+  .lower-dishes {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    .dishes-card {
+      margin-left: 10px;
+    }
+  }
+  .dishes-card {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    img.dish-img {
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 3px 2px 18px 1px #545454;
+    } 
+    .dish-title {
+      position: relative;
+      top: 40%;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      width: 140px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .dish-delete {
+      position: relative;
+      bottom: -70%;
+      left: 30%;
+    }
+  }
+  .table {
+    width: auto;
+    border: 1px dotted $my_yellow_orange;
+    background-color: rgba(255, 255, 255, 0.7);
+    thead {
+      text-align: center;
+      .calendar-header-column {
+        background-color: $my_yellow_orange;
+      }
+    }
+    tbody {
+      vertical-align: middle;
+      tr.calendar-row {
+        height: 200px;
+        th.calendar-header-row {
+          width: 50px;
+          background-color: $my_yellow_orange;
+        }
+        td.calendar-slot {
+          width: 165px;
+          border-style: dotted;
+        }
       }
     }
   }
