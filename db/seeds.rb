@@ -98,18 +98,18 @@ dish6 = Dish.create!(
 )
 dish6.photo.attach(io: File.open('app/assets/images/tiramisu.jpeg'), filename: "tiramisu.jpeg", content_type: "image/jpeg")
 
-# dish7 = Dish.create!(
-#   name: "Moroccan lamb tongue",
-#   description: "Melt-in-your-mouth lamb and warming Moroccan spices – this lamb tagine recipe is perfect served with warm flatbreads.",
-#   recipie: "1. Put all the vegetables in the broth in the saucepan with the 2 tongues and bring to the boil.
-#     2. Reduce heat and cook for 45 minutes.
-#     3. Drain the tongues, peel them and cut them into slices.
-#     4. In another saucepan, heat the oil and brown the carrots, onion and celery.
-#     5. When the vegetables are nicely browned, add a ladle of the cooking broth.
-#     6. Bring to a simmer, adding a little broth if necessary. Add the diced candied lemon and the tongues 10 minutes before the end of cooking.",
-#   numpers: 6-8
-# )
-# dish7.photo.attach(io: File.open('app/assets/images/moroccan-lamb-tagine.jpg'), filename: "moroccan-lamb-tagine.jpg", content_type: "image/jpg")
+dish7 = Dish.create!(
+  name: "Moroccan lamb tongue",
+  description: "Melt-in-your-mouth lamb and warming Moroccan spices – this lamb tagine recipe is perfect served with warm flatbreads.",
+  recipie: "1. Put all the vegetables in the broth in the saucepan with the 2 tongues and bring to the boil.
+    2. Reduce heat and cook for 45 minutes.
+    3. Drain the tongues, peel them and cut them into slices.
+    4. In another saucepan, heat the oil and brown the carrots, onion and celery.
+    5. When the vegetables are nicely browned, add a ladle of the cooking broth.
+    6. Bring to a simmer, adding a little broth if necessary. Add the diced candied lemon and the tongues 10 minutes before the end of cooking.",
+  numpers: 6-8
+)
+dish7.photo.attach(io: File.open('app/assets/images/moroccan-lamb-tagine.jpg'), filename: "moroccan-lamb-tagine.jpg", content_type: "image/jpg")
 
 p 'Dishes created'
 
@@ -145,13 +145,13 @@ mascarpone = Ingredient.create!(name: "Mascarpone")
 coffee = Ingredient.create!(name: "Coffee granules")
 ladyfingers = Ingredient.create!(name: "Ladyfingers")
 cocoa = Ingredient.create!(name: "Cocoa powder")
-# tongue_of_lamb = Ingredient.create!(name: "Tongue of lamb")
-# celery = Ingredient.create!(name: "Celery")
-# carrot = Ingredient.create!(name: "Carrot")
-# clove = Ingredient.create!(name: "Clove")
-# laurel = Ingredient.create!(name: "Laurel")
-# thyme = Ingredient.create!(name: "Thyme")
-# parsley = Ingredient.create!(name: "Parsley")
+tongue_of_lamb = Ingredient.create!(name: "Tongue of lamb")
+celery = Ingredient.create!(name: "Celery")
+carrot = Ingredient.create!(name: "Carrot")
+clove = Ingredient.create!(name: "Clove")
+laurel = Ingredient.create!(name: "Laurel")
+thyme = Ingredient.create!(name: "Thyme")
+parsley = Ingredient.create!(name: "Parsley")
 
 
 p 'Ingredients created'
@@ -209,15 +209,15 @@ IngredientDish.create!(dish_id: dish6.id, ingredient_id: ladyfingers.id, quantit
 IngredientDish.create!(dish_id: dish6.id, ingredient_id: cocoa.id, quantity: "1 tbsp")
 
 # ingredients_tongue_of_lamb = [tongue_of_lamb, celery, carrot, onion, clove, laurel, thyme, salt, pepper, parsley]
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: tongue_of_lamb.id, quantity: "2")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: celery.id, quantity: "1 stalk")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: carrot.id, quantity: "2")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: onion.id, quantity: "1")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: clove.id, quantity: "1")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: laurel.id, quantity: "1")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: thyme.id, quantity: "1 sprig")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: salt.id, quantity: "1 pinch")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: pepper.id, quantity: "2 tbsp")
-# IngredientDish.create!(dish_id: dish7.id, ingredient_id: parsley.id, quantity: "1 tbsp")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: tongue_of_lamb.id, quantity: "2")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: celery.id, quantity: "1 stalk")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: carrot.id, quantity: "2")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: onion.id, quantity: "1")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: clove.id, quantity: "1")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: laurel.id, quantity: "1")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: thyme.id, quantity: "1 sprig")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: salt.id, quantity: "1 pinch")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: pepper.id, quantity: "2 tbsp")
+IngredientDish.create!(dish_id: dish7.id, ingredient_id: parsley.id, quantity: "1 tbsp")
 
 p "Links between Dishes and Ingredients created"

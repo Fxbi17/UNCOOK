@@ -1,9 +1,8 @@
-/*========== Etoile add to Favorites ==========*/
-.text-yellow {
-  color: $yellow
+/*========== general ==========*/
+body {
+  width: 100%;
 }
 
-/*==========  ==========*/
 a {
   color: $my_orange_red;
   text-decoration: none;
@@ -13,12 +12,16 @@ a:hover {
   color: $my_blue_light;
 }
 
+/*========== Etoile add to Favorites ==========*/
+.text-yellow {
+  color: $yellow
+}
+
 /*========== DISH Show ==========*/
 .scroll {
   height: 700px;
   overflow: scroll;
 }
-
 
 /*========== Luffy ==========*/
 .mdl-tabs__panel{
