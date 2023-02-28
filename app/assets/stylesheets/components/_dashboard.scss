@@ -1,0 +1,16 @@
+.container-dashboard {
+	background: $my_yellow;
+
+	margin: 50px;
+	border-radius: 6px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.3);
+	overflow: hidden;
+	min-height: 530px;
+
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  // font-weight: bolder;
+}
