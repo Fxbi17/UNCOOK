@@ -1,17 +1,19 @@
 <div class="background-favorites">
   <div class="lower-dishes">
     <% @favorites_dish.each do |dish| %>
-      <div class="dishes-card">
-        <div class="dish-img">
-          <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
+      <%= link_to dish_path(dish.id) do %>
+        <div class="dishes-card">
+          <div class="dish-img">
+            <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
+          </div>
+          <div class="title-button-card">
+            <p class="dish-title"><%= dish.name %></p>
+            <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
+              <i class='bx bx-cart-alt'></i>
+            <% end %>
+          </div>
         </div>
-        <div class="title-button-card">
-          <p class="dish-title"><%= dish.name %></p>
-          <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
-            <i class='bx bx-cart-alt'></i>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
