@@ -13,68 +13,68 @@
 
   <br>
 
-  <div class="container table-responsive">
-    <table class="table table-warning table-hover table-bordered">
+  <div class="container">
+    <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col"></th>
-          <th scope="col">Monday</th>
-          <th scope="col">Tuesday</th>
-          <th scope="col">Wednesday</th>
-          <th scope="col">Thursday</th>
-          <th scope="col">Friday</th>
-          <th scope="col">Saturday</th>
-          <th scope="col">Sunday</th>
+          <th class="calendar-header-column" scope="col"></th>
+          <th class="calendar-header-column" scope="col">Monday</th>
+          <th class="calendar-header-column" scope="col">Tuesday</th>
+          <th class="calendar-header-column" scope="col">Wednesday</th>
+          <th class="calendar-header-column" scope="col">Thurday</th>
+          <th class="calendar-header-column" scope="col">Friday</th>
+          <th class="calendar-header-column" scope="col">Saturday</th>
+          <th class="calendar-header-column" scope="col">Sunday</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">Lunch</th>
-            <td data-sortable-target="list" data-position="1">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(1) if current_user.find_menu_dish_from_position(1).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="3">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(3) if current_user.find_menu_dish_from_position(3).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="5">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(5) if current_user.find_menu_dish_from_position(5).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="7">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(7) if current_user.find_menu_dish_from_position(7).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="9">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(9) if current_user.find_menu_dish_from_position(9).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="11">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(11) if current_user.find_menu_dish_from_position(11).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="13">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(13) if current_user.find_menu_dish_from_position(13).present? %>
-            </td>
+        <tr class="calendar-row">
+          <th class="calendar-header-row" scope="row" >Lunch</th>
+          <td class="calendar-slot" data-sortable-target="list" data-position="1">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(1) if current_user.find_menu_dish_from_position(1).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="2">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(2) if current_user.find_menu_dish_from_position(2).present?%>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="3">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(3) if current_user.find_menu_dish_from_position(3).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="4">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(4) if current_user.find_menu_dish_from_position(4).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="5">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(5) if current_user.find_menu_dish_from_position(5).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="6">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(6) if current_user.find_menu_dish_from_position(6).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="7">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(7) if current_user.find_menu_dish_from_position(7).present? %>
+          </td>
         </tr>
-        <tr>
-          <th scope="row">Dinner</th>
-            <td data-sortable-target="list" data-position="2">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(2) if current_user.find_menu_dish_from_position(2).present?%>
-            </td>
-            <td data-sortable-target="list" data-position="4">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(4) if current_user.find_menu_dish_from_position(4).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="6">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(6) if current_user.find_menu_dish_from_position(6).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="8">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(8) if current_user.find_menu_dish_from_position(8).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="10">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(10) if current_user.find_menu_dish_from_position(10).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="12">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(12) if current_user.find_menu_dish_from_position(12).present? %>
-            </td>
-            <td data-sortable-target="list" data-position="14">
-              <%= render "card", menu_dish: current_user.find_menu_dish_from_position(14) if current_user.find_menu_dish_from_position(14).present? %>
-            </td>
+        <tr class="calendar-row">
+          <th class="calendar-header-row" scope="row">Dinner</th>
+          <td class="calendar-slot" data-sortable-target="list" data-position="8">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(8) if current_user.find_menu_dish_from_position(8).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="9">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(9) if current_user.find_menu_dish_from_position(9).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="10">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(10) if current_user.find_menu_dish_from_position(10).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="11">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(11) if current_user.find_menu_dish_from_position(11).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="12">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(12) if current_user.find_menu_dish_from_position(12).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="13">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(13) if current_user.find_menu_dish_from_position(13).present? %>
+          </td>
+          <td class="calendar-slot" data-sortable-target="list" data-position="14">
+            <%= render "card", menu_dish: current_user.find_menu_dish_from_position(14) if current_user.find_menu_dish_from_position(14).present? %>
+          </td>
         </tr>
       </tbody>
     </table>
