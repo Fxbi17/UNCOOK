@@ -14,75 +14,65 @@
   <br>
 
   <div class="container">
-    <table class="table table-striped table-bordered">
+    <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col"></th>
-          <th scope="col">Midi</th>
-          <th scope="col">Soir</th>
+          <th class="calendar-header-column" scope="col"></th>
+          <th class="calendar-header-column" scope="col">Monday</th>
+          <th class="calendar-header-column" scope="col">Tuesday</th>
+          <th class="calendar-header-column" scope="col">Wednesday</th>
+          <th class="calendar-header-column" scope="col">Thurday</th>
+          <th class="calendar-header-column" scope="col">Friday</th>
+          <th class="calendar-header-column" scope="col">Saturday</th>
+          <th class="calendar-header-column" scope="col">Sunday</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row" >Lundi</th>
-          <td data-sortable-target="list" data-position="1">
+        <tr class="calendar-row">
+          <th class="calendar-header-row" scope="row" >Lunch</th>
+          <td class="calendar-slot" data-sortable-target="list" data-position="1">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(1) if current_user.find_menu_dish_from_position(1).present? %>
           </td>
-          <td data-sortable-target="list" data-position="2">
+          <td class="calendar-slot" data-sortable-target="list" data-position="2">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(2) if current_user.find_menu_dish_from_position(2).present?%>
           </td>
-        </tr>
-        <tr>
-          <th scope="row">Mardi</th>
-          <td data-sortable-target="list" data-position="3">
+          <td class="calendar-slot" data-sortable-target="list" data-position="3">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(3) if current_user.find_menu_dish_from_position(3).present? %>
           </td>
-          <td data-sortable-target="list" data-position="4">
+          <td class="calendar-slot" data-sortable-target="list" data-position="4">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(4) if current_user.find_menu_dish_from_position(4).present? %>
           </td>
-        </tr>
-        <tr>
-          <th scope="row">Mercredi</th>
-          <td data-sortable-target="list" data-position="5">
+          <td class="calendar-slot" data-sortable-target="list" data-position="5">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(5) if current_user.find_menu_dish_from_position(5).present? %>
           </td>
-          <td data-sortable-target="list" data-position="6">
+          <td class="calendar-slot" data-sortable-target="list" data-position="6">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(6) if current_user.find_menu_dish_from_position(6).present? %>
           </td>
-        </tr>
-        <tr>
-          <th scope="row">Jeudi</th>
-          <td data-sortable-target="list" data-position="7">
+          <td class="calendar-slot" data-sortable-target="list" data-position="7">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(7) if current_user.find_menu_dish_from_position(7).present? %>
           </td>
-          <td data-sortable-target="list" data-position="8">
+        </tr>
+        <tr class="calendar-row">
+          <th class="calendar-header-row" scope="row">Dinner</th>
+          <td class="calendar-slot" data-sortable-target="list" data-position="8">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(8) if current_user.find_menu_dish_from_position(8).present? %>
           </td>
-        </tr>
-        <tr>
-          <th scope="row">Vendredi</th>
-          <td data-sortable-target="list" data-position="9">
+          <td class="calendar-slot" data-sortable-target="list" data-position="9">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(9) if current_user.find_menu_dish_from_position(9).present? %>
           </td>
-          <td data-sortable-target="list" data-position="10">
+          <td class="calendar-slot" data-sortable-target="list" data-position="10">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(10) if current_user.find_menu_dish_from_position(10).present? %>
           </td>
-        </tr>
-        <tr>
-          <th scope="row">Samedi</th>
-          <td data-sortable-target="list" data-position="11">
+          <td class="calendar-slot" data-sortable-target="list" data-position="11">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(11) if current_user.find_menu_dish_from_position(11).present? %>
           </td>
-          <td data-sortable-target="list" data-position="12">
+          <td class="calendar-slot" data-sortable-target="list" data-position="12">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(12) if current_user.find_menu_dish_from_position(12).present? %>
           </td>
-        </tr>
-        <tr>
-          <th scope="row">Dimanche</th>
-          <td data-sortable-target="list" data-position="13">
+          <td class="calendar-slot" data-sortable-target="list" data-position="13">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(13) if current_user.find_menu_dish_from_position(13).present? %>
           </td>
-          <td data-sortable-target="list" data-position="14">
+          <td class="calendar-slot" data-sortable-target="list" data-position="14">
             <%= render "card", menu_dish: current_user.find_menu_dish_from_position(14) if current_user.find_menu_dish_from_position(14).present? %>
           </td>
         </tr>

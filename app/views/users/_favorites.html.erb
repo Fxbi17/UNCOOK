@@ -1,55 +1,17 @@
 <div class="background-favorites">
-
-  <div class="favorites-container my-3 mx-3">
-    <h3>My Favorites</h3>
-      <div class="row">
-        <% @favorites_dish.each do |dish| %>
-          <div class="col-sm-4 my-3">
-            <%= link_to dish_path(dish.id) do %>
-              <div class="card-dishes">
-                <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
-                <div class="card-dish-name"><h2><%= dish.name %></h2></div>
-                <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
-                  <i class='bx bx-cart-alt'></i>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-  </div>
-
-  <!--========== Favoris-1 ==========-->
-  <section class="favoris-section bd-container" id="favoris">
-    <div class="favoris__container bd-grid">
-      <% @favorites_dish.each do |dish| %>
-        <div class="favoris__content my-2">
-          <div class="favoris__img">
-            <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
-          </div>
-            <h3 class="favoris__name"><%= dish.name %></h3>
-            <span class="favoris__detail">Delicious dish</span>
-            <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
-              <i class='bx bx-cart-alt'></i>
-            <% end %>
-        </div>
-      <% end %>
-    </div>
-  </section>
-
-  <!--========== Favoris-2 ==========-->
   <div class="lower-dishes">
     <% @favorites_dish.each do |dish| %>
       <div class="dishes-card">
         <div class="dish-img">
           <%= cl_image_tag dish.photo.key, width: 140, height: 140, crop: :fill, class: "bd-placeholder-img rounded-circle" %>
         </div>
-        <div class="dish-title"><%= dish.name %></div>
-        <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
-          <i class='bx bx-cart-alt'></i>
-        <% end %>
+        <div class="title-button-card">
+          <p class="dish-title"><%= dish.name %></p>
+          <%= link_to dish_menu_dishes_path(dish), class:"button favoris__button", data:{turbo_method: :post}  do %>
+            <i class='bx bx-cart-alt'></i>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
-
 </div>
