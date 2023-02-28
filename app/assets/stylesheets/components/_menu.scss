@@ -1,12 +1,22 @@
 .table {
-  width: 200%;
+  // width: 200%;
+  width: auto;
   text-align: center;
   tbody {
     vertical-align: middle;
-    td {
-      height: 235px;
-      .dishes-card {
-        margin-left: 30%;
+    tr {
+      height: 200px;
+      th {
+        width: 50px;
+      }
+
+      td {
+        height: 235px;
+        width: 165px;
+        .dishes-card {
+          // margin-left: 30%;
+          margin: auto;
+        }
       }
     }
   }

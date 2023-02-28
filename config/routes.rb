@@ -12,5 +12,4 @@ Rails.application.routes.draw do
       end
     end
   end
-  # resources :menu, only: [:show]
 end

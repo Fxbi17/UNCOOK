@@ -1,7 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import Sortable from 'sortablejs';
 import Rails from "@rails/ujs";
-// window.Rails = Rails;
 
 // Connects to data-controller="sortable"
 export default class extends Controller {
