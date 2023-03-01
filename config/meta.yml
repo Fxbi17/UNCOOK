@@ -1,0 +1,5 @@
+meta_product_name: "Uncook"
+meta_title: "UNCOOK - Make your life easier"
+meta_description: "UNCOOK is a platform that allows you to make your weekly menu with our delicious recipes!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
