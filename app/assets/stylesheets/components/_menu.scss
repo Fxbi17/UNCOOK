@@ -1,8 +1,12 @@
 #nav-menu {
+  .container-menu_dish {
+    height: auto;
+  }
   .lower-dishes {
     display: flex;
     overflow-x: scroll;
     padding-bottom: 10px;
+    height: 165px;
     .dishes-card {
       margin-left: 10px;
     }
@@ -11,27 +15,32 @@
     background-color: transparent;
     width: 150px;
     height: 150px;
-    img.dish-img {
-      height: 140px;
-      width: 140px;
-      border-radius: 50%;
-      position: absolute;
-      box-shadow: 3px 2px 18px 1px #545454;
-    }
-    .dish-title {
-      position: relative;
-      top: 40%;
-      left: 0;
-      background-color: rgba(255, 255, 255, 0.7);
-      text-align: center;
-      width: 140px;
-      font-size: 16px;
-      font-weight: bold;
+    .dish-content {
+      height: inherit;
+      img.dish-img {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        position: absolute;
+        box-shadow: 3px 2px 18px 1px #545454;
+      }
+      .dish-title {
+        position: relative;
+        top: 4.6em;
+        transform: translateY(-58%);
+        background-image: linear-gradient(to right, transparent,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7), transparent);
+        text-align: center;
+        width: 140px;
+        font-size: 16px;
+        font-weight: bold;
+      }
     }
     .dish-delete {
+      display: block;
+      text-align: center;
       position: relative;
-      bottom: -70%;
-      left: 30%;
+      bottom: 7px;
+      width: 140px;
     }
   }
   .table {
