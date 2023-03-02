@@ -2,8 +2,8 @@
 <html>
   <head>
     <title><%= meta_title %></title>
+     <%= favicon_link_tag "favicon-32x32.png", rel: "icon", type: "image/png" %>
     <meta name="description" content="<%= meta_description %>">
-
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -30,7 +30,7 @@
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   </head>
-
+  
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
