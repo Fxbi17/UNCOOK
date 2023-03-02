@@ -12,6 +12,18 @@ a:hover {
   color: $my_blue_light;
 }
 
+h1 {
+  font-weight: bold!important;
+  font-size: 34px;
+  // line-height: 1.3;
+}
+
+#title {
+  font-weight: bold!important;
+  font-size: 48px;
+  color: $my_orange_red;
+}
+
 /*========== Etoile add to Favorites ==========*/
 .text-yellow {
   color: $yellow
