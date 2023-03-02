@@ -5,4 +5,8 @@ class ApplicationController < ActionController::Base
   # et en ajoutant protect_from_forgery dans votre ApplicationController
 
   protect_from_forgery with: :exception
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end
