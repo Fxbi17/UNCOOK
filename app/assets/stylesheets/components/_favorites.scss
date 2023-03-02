@@ -54,7 +54,7 @@
   /*========== Favoris-2 ==========*/
   .lower-dishes{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .dishes-card{
@@ -76,6 +76,10 @@
     margin-right: 20px;
     position: relative;
     width: 180px;
+    margin-bottom: 20px;
+    .dish-img {
+      padding-top: 10px;
+    }
     .dish-img>img{
       border-radius: 50%;
       height:100px;
@@ -89,7 +93,8 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      padding-top: 10px;
+      padding-top: 0px;
+      height: inherit;
       .favoris__button {
         font-size: 25px;
         display: block;
@@ -98,6 +103,10 @@
         position: unset;
         bottom: initial;
         right: inherit;
+      }
+      .dish-title {
+        text-align: center;
+        margin-bottom: 0;
       }
     }
   }

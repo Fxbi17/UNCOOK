@@ -6,7 +6,7 @@
     display: flex;
     overflow-x: scroll;
     padding-bottom: 10px;
-    height: 165px;
+    height: 175px;
     .dishes-card {
       margin-left: 10px;
     }
@@ -16,14 +16,10 @@
     width: 150px;
     height: 150px;
     .dish-content {
-      height: inherit;
-      img.dish-img {
-        height: 140px;
-        width: 140px;
-        border-radius: 50%;
-        position: absolute;
-        box-shadow: 3px 2px 18px 1px #545454;
-      }
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+      box-shadow: 3px 2px 4px 1px #545454;
       .dish-title {
         position: relative;
         top: 4.6em;
@@ -39,7 +35,7 @@
       display: block;
       text-align: center;
       position: relative;
-      bottom: 7px;
+      bottom: 0;
       width: 140px;
     }
   }

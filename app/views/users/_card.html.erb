@@ -1,6 +1,6 @@
 <div class="dishes-card" data-id="<%= menu_dish.id %>" data-dish-id="<%= menu_dish.dish.id%>">
-  <div class="dish-content">
-    <%= cl_image_tag menu_dish.dish.photo.key, height: 140, width: 140, crop: :fill, class: "dish-img" %>
+  <div class="dish-content" style="background-image: url('<%= cl_image_path menu_dish.dish.photo.key, height: 140, width: 140, crop: :fill %>')">
+    
     <p class="dish-title"><%= menu_dish.dish.name %></p>
   </div>
   <%= link_to "Delete",
