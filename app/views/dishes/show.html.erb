@@ -25,10 +25,11 @@
           <i class="fa-solid fa-list"></i>
         </button>
       </h2>
-
-      <% @dish.ingredient_dish.each do |ingredient_dish| %>
-        <li><%= ingredient_dish.quantity %> <%= ingredient_dish.ingredient.name %></li>
-      <% end %>
+      <ul>
+        <% @dish.ingredient_dish.each do |ingredient_dish| %>
+            <li><%= ingredient_dish.quantity %> <%= ingredient_dish.ingredient.name %></li>
+        <% end %>
+      </ul>
       <br>
       <h2>Recipe</h2>
       <p><%= simple_format h(@dish.recipie) %></p>
