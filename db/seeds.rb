@@ -268,21 +268,6 @@ dish20 = Dish.create!(
 )
 dish20.photo.attach(io: File.open('app/assets/images/duck.jpg'), filename: "duck.jpg", content_type: "image/jpg")
 
-dish21 = Dish.create!(
-  name: "Fennel, salami and chilli pizza",
-  description: "A hit of aniseed from the fennel pairs beautifully with a good salami, a kick of chilli and rich molten cheese.",
-  recipie: "1. Preheat the oven to 225°C fan bake. Place a heavy flat baking tray in to preheat.\n
-    2. Brush the dough with a little olive oil then spread with the tomato sauce, leaving a border around the edge. Lay the salami over the top. Toss the fennel slices with a little olive oil and arrange on top then dot over the cheese. Slide the pizza, still on the paper, onto the hot baking tray and bake for about 12 minutes, or until puffed and golden, turning for even browning if necessary.\n
-    3. Scatter over chilli flakes to taste then the reserved fennel fronds, if desired. Serve immediately.\n
-    4. Combine the flour, yeast, salt and sugar in a large bowl. Tip in the combined water and oil and bring together to make a soft shaggy dough. Tip onto a lightly floured bench and bring together with your hands. Knead for 5 minutes until smooth and elastic.\n
-    5. Place in a large, oiled bowl and turn the dough to lightly coat in the oil. Cover with plastic wrap. Set aside in a draught-free place for 1½-2 hours to double in size.\n
-    6. When the dough has risen, remove from the bowl and divide in half.\n
-    7. Dust with flour then place on a sheet of baking paper and roll out or flatten the dough with your fingers to the desired shape.\n
-    BONUS: This dough makes two pizzas and can be made 2 days ahead of using. If making ahead, cover and refrigerate after the initial kneading or divide between 2 large sealable plastic bags. Use straight from the fridge when ready to assemble and cook. If only making 1 pizza, freeze the other half of the dough in a plastic bag for another day.",
-  numpers: 1
-)
-dish21.photo.attach(io: File.open('app/assets/images/pizza.png'), filename: "pizza.png", content_type: "image/png")
-
 p 'Dishes created'
 
 p 'Creating ingredients'
@@ -380,7 +365,6 @@ red_onion = Ingredient.create!(name: "red onion")
 rendang = Ingredient.create!(name: "rendang")
 rice = Ingredient.create!(name: "rice")
 risotto_rice = Ingredient.create!(name: "risotto rice")
-salami = Ingredient.create!(name: "salami")
 salmon = Ingredient.create!(name: "salmon")
 salt = Ingredient.create!(name: "salt")
 sambal = Ingredient.create!(name: "sambal")
@@ -405,11 +389,9 @@ vegetable_oil = Ingredient.create!(name: "vegetable oil")
 vegetable_stock = Ingredient.create!(name: "vegetable stock")
 vinegar = Ingredient.create!(name: "vinegar")
 walnuts = Ingredient.create!(name: "walnuts")
-water = Ingredient.create!(name: "water")
 wine = Ingredient.create!(name: "wine")
 worcestershire = Ingredient.create!(name: "worcestershire")
 wraps = Ingredient.create!(name: "wraps")
-yeast = Ingredient.create!(name: "yeast")
 yoghurt = Ingredient.create!(name: "yoghurt")
 
 p 'Ingredients created'
@@ -703,18 +685,5 @@ IngredientDish.create!(dish_id: dish20.id, ingredient_id: vinegar.id, quantity: 
 IngredientDish.create!(dish_id: dish20.id, ingredient_id: apricots.id, quantity: "6")
 IngredientDish.create!(dish_id: dish20.id, ingredient_id: chicken_stock.id, quantity: "1 cup")
 IngredientDish.create!(dish_id: dish20.id, ingredient_id: butter.id, quantity: "1 tbsp")
-# ingredients chilli pizza [olive oil, tomato, 80 g salami, fennel, 100 g mozzarella, chilli flakes, flour, salt, sugar, water]
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: olive_oil.id, quantity: "1 tbsp")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: tomato.id, quantity: "1")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: salami.id, quantity: "80 g")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: fennel.id, quantity: "1")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: mozzarella.id, quantity: "100 g")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: chilli_flakes.id, quantity: "1 tbsp")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: flour.id, quantity: "1 cup")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: salt.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: sugar.id, quantity: "1 pinch")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: water.id, quantity: "225 ml")
-IngredientDish.create!(dish_id: dish21.id, ingredient_id: yeast.id, quantity: "1 tbsp")
-
 
 p "Links between Dishes and Ingredients created"
