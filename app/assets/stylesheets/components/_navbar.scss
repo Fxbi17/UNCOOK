@@ -1,3 +1,11 @@
 .navbar {
   height: 70px;
+  .container-fluid {
+    img {
+      height: 65px;
+    }
+  }
+  .navbar-brand {
+    font-weight: bold;
+  }
 }
